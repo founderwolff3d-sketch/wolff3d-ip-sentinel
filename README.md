@@ -58,10 +58,15 @@ ots verify 06_Blockchain_OTS_Proofs/SHA256SUMS.txt.ots
 
 ---
 
-## ⚖️ Legal Notice & Defensive License
+## ⚖️ Legal Notice & Defensive Publication Status
 
-The materials published in this repository constitute formal, verifiable **Prior Art** under:
-* 35 U.S.C. § 102(a)(1) (United States Patent Act)
-* Article 54(2) EPC (European Patent Convention)
+This repository and its associated releases are published as a formal **Defensive Publication** to establish publicly accessible, verifiable **Prior Art** under:
+* **United States**: 35 U.S.C. § 102(a)(1)
+* **Europe**: Article 54(2) EPC
+* **China**: Article 22, Paragraph 2 of the Patent Law of the PRC
 
-All code and parametric kernels are released under the [MIT License](LICENSE). Mechanical topologies and drawings are dedicated to public defensive use under open hardware principles.
+The primary objective of this disclosure is to secure permanent worldwide **Freedom to Operate (FTO)** by placing the disclosed technical solutions, parametric designs, and dynamic verification datasets into the global public domain.
+
+### Licensing & Rights
+* **Software & Parametric Kernels**: Released under the [MIT License](LICENSE).
+* **Hardware Designs, Drawings & STEP Topologies**: Dedicated to the public domain under [CC0 1.0 Universal (Public Domain Dedication)](https://creativecommons.org/publicdomain/zero/1.0/) to eliminate patent encumbrance and guarantee unrestricted defensive adoption.
