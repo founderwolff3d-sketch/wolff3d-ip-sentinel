@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,32 +18,35 @@
 </head>
 <body>
   <div class="container">
-    <a class="back" href="../">&larr; 返回公开档案目录</a>
-    <h1>WOLFF3D-D1-LC RevB 技术规范与现有技术公开说明书</h1>
-    <p><strong>公开主体</strong>: Wolff3D Autonomous IP Sentinel (Agent 2)<br>
-       <strong>生效时点</strong>: 2026-09-30<br>
-       <strong>FTO 审查状态</strong>: 🟢 GREEN LIGHT (全要素比对通过)</p>
+    <a class="back" href="../">&larr; Back to Public Archive</a>
+    <h1>Technical Specification &amp; Prior Art Defensive Disclosure</h1>
+    <p><strong>Authority</strong>: Wolff3D Autonomous IP Sentinel (Agent 2)<br>
+       <strong>Effective Date</strong>: September 30, 2026<br>
+       <strong>Freedom-to-Operate Status</strong>: 🟢 GREEN LIGHT (Element-by-Element Analysis Cleared)</p>
     
-    <h2>1. 核心技术要素公开与权利声明</h2>
+    <h2>1. Disclosed Technical Elements &amp; Defensive Scope</h2>
     <ul>
-      <li><strong>非圆弧双曲过渡板簧</strong>: 65Mn 预淬火弹簧钢（46~48 HRC），内角采用 4x R4.20 CONIC 0.65 双曲线拓扑过渡，彻底规避固定单一半径比值专利。</li>
-      <li><strong>主动质心力矩解耦</strong>: 7075-T651 减重滑台底部设置 RECESS 1.20 非对称偏置槽，产生 ΔY = +0.120mm 偏置，配合前馈算法抵消偏航力矩。</li>
-      <li><strong>全固态干式涡流消震</strong>: TU1/C10100 纯无氧铜阻尼片嵌装于气隙层，利用音圈电机漏磁场感生洛伦兹阻尼力，整定时间压缩至 2.00 ~ 2.35 ms。</li>
+      <li><strong>Non-Circular Hyperbolic Flexures</strong>: Cold-rolled pre-quenched 65Mn spring steel (46–48 HRC), working ligament thickness 0.350 &plusmn; 0.010 mm, utilizing 4x R4.20 CONIC 0.65 hyperbolic profile transitions to eliminate fixed radius ratio dependencies and mitigate HAZ stress concentration.</li>
+      <li><strong>Intentional Mass-Offset Decoupling</strong>: Isogrid 7075-T651 moving slider featuring RECESS 1.20 asymmetric bottom pockets, yielding intentional static center-of-mass shift ΔY = +0.120mm to invalidate strict coplanar claims, dynamically compensated via feedforward voltage injection.</li>
+      <li><strong>Solid-State Passive Eddy Current Damping</strong>: Integrated TU1/C10100 oxygen-free copper damper within the functional air gap, utilizing stator stray flux to generate instantaneous Lorentz damping forces, achieving settling times within 2.00–2.35 ms under 20G–40G shock.</li>
     </ul>
 
-    <h2>2. 动力学物理与制造红线指标</h2>
+    <h2>2. Dynamic Boundaries &amp; Physical Verification Targets</h2>
     <table>
-      <tr><th>指标项目</th><th>验收门槛</th><th>实测/计算值</th></tr>
-      <tr><td>主模态频率 (Tx)</td><td>[5.96, 6.68] Hz</td><td>6.12 Hz (PASS)</td></tr>
-      <tr><td>高阶偏航模态分离比</td><td>&ge; 282:1</td><td>288:1 (PASS)</td></tr>
-      <tr><td>高阶俯仰模态分离比</td><td>&ge; 310:1</td><td>315:1 (PASS)</td></tr>
-      <tr><td>Goodman 疲劳安全系数</td><td>&ge; 2.5</td><td>n = 4.90 (&ge; 10^8 次循环)</td></tr>
+      <tr><th>Metric / Parameter</th><th>Acceptance Threshold</th><th>Verified / Modeled Value</th></tr>
+      <tr><td>Primary Translation Mode (Tx)</td><td>[5.96, 6.68] Hz</td><td>6.12 Hz (PASS)</td></tr>
+      <tr><td>Yaw Parasitic Separation Ratio</td><td>&ge; 282:1</td><td>288:1 (PASS)</td></tr>
+      <tr><td>Pitch Parasitic Separation Ratio</td><td>&ge; 310:1</td><td>315:1 (PASS)</td></tr>
+      <tr><td>Goodman Fatigue Safety Factor</td><td>&ge; 2.5</td><td>n = 4.90 (&ge; 10^8 cycles)</td></tr>
+      <tr><td>Moving Mass (Bare Slider)</td><td>&le; 38.0 g</td><td>35.55 g (PASS)</td></tr>
     </table>
 
-    <h2>3. 密码学与区块链时间戳证明</h2>
-    <p>对应 STEP 总成哈希值：</p>
+    <h2>3. Cryptographic Verification &amp; Blockchain Proofs</h2>
+    <p>AP214 STEP Assembly Digest (SHA-256):</p>
     <pre>3e9818ea1575754ff823349314b68d2e3e86d5f27e1fb2c86517a1d11c89f75a</pre>
-    <p>比特币区块链存证文件：<code>06_Blockchain_OTS_Proofs/W1-LC-ASM-00_Module_C_RevB.STEP.ots</code></p>
+    <p>Vector Engineering Drawing Digest (SHA-256):</p>
+    <pre>7daeb3e4c0385f9200e09ab47c917fd42548644b3fb3485e87f8a68bfb56921a</pre>
+    <p>Bitcoin Mainnet OTS Proof File: <code>06_Blockchain_OTS_Proofs/W1-LC-ASM-00_Module_C_RevB.STEP.ots</code></p>
   </div>
 </body>
 </html>
