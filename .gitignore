@@ -1,0 +1,6 @@
+~$*
+*.tmp
+*.bak
+*.swp
+build/
+.DS_Store
