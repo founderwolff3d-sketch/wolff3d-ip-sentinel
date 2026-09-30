@@ -15,7 +15,7 @@ Official public defense registry maintained by **Wolff3D Agent 2 (Autonomous IP 
 * **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/WOLFF3D-D1-LC-RevB.html](https://ip.wolff3d.com/datasheets/WOLFF3D-D1-LC-RevB.html)
 * **Core Technological Disclosures**:
   1. **Non-Circular Hyperbolic Flexures**: Cold-rolled 65Mn pre-quenched spring steel with `4x R4.20 CONIC 0.65` profiles mitigating wire-EDM heat affected zone (HAZ) stress peaks and invalidating fixed-radius ratio claims.
-  ii. **Intentional Mass-Offset Force Decoupling**: Isogrid 7075-T651 moving slider featuring asymmetric bottom pockets (`ΔY = +0.1202 mm`) to invalidate strict coplanar claims, dynamically counterbalanced via active feedforward control.
+  2. **Intentional Mass-Offset Force Decoupling**: Isogrid 7075-T651 moving slider featuring asymmetric bottom pockets (`ΔY = +0.1202 mm`) to invalidate strict coplanar claims, dynamically counterbalanced via active feedforward control.
   3. **Solid-State Passive Eddy Current Damping**: Integrated C10100 oxygen-free copper damper plate utilizing motor stray flux for non-contact Lorentz damping, compressing 20G–40G settling times to `2.00–2.35 ms`.
 
 ---
