@@ -20,6 +20,17 @@ Official public defense registry maintained by **Wolff3D Agent 2 (Autonomous IP 
 
 ---
 
+---
+
+## 📌 Featured Project: Aero-Grade Monocoque Clevis Bracket 25x25 (Rev A)
+
+* **Publication Date**: October 3, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/clevis-bracket-25x25.html](https://ip.wolff3d.com/datasheets/clevis-bracket-25x25.html)
+* **Core Technological Disclosures**:
+  1. **TPMS Diamond-D Continuous Microarchitecture**: Monocoque 1.80 mm shell enclosing continuous gradient Schoen Diamond-D minimal surface lattice (`scale = 0.12`), eliminating stress concentrations at structural interfaces.
+  2. **Dual Powder Evacuation & Flush Welded Plugs**: Symmetrical `2x Φ4.00 mm` non-critical evacuation ports with `Φ6.50 x 1.00 mm` counterbores, ensuring zero trapped unmelted powder and compliant with aerospace NDT standards.
+  3. **Concentric Lug Arch Geometry**: `Φ10.00 mm` pin journal featuring `R12.00 mm` concentric profile blend with localized solid reinforcing bosses, clearing ASTM E1441 CT metallurgical criteria.
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -29,6 +40,9 @@ All engineering release assets are cryptographically anchored to the **Bitcoin M
 3e9818ea1575754ff823349314b68d2e3e86d5f27e1fb2c86517a1d11c89f75a  02_3D_CAD_STEP/W1-LC-ASM-00_Module_C_RevB.STEP
 7daeb3e4c0385f9200e09ab47c917fd42548644b3fb3485e87f8a68bfb56921a  01_2D_Drawings_PDF/W1-LC-ASM-00_Module_C_RevB.pdf
 e2476df39612d1d2d8c86e407b4665a033f65e4c0463782181c768e06e1bc17c  03_Parametric_Kernel/build_WOLFF3D_LC_RevB.cpp
+5224aff37abaee64bb87264787d7cab14c32ef2f8b3ff2373bbf2bbbfba6c7a8  02_3D_CAD_STEP/clevis_bracket_standard_25x25.STEP
+164a8d2e4bb98044f9549dabeec681dedd9675f86058fc9a65e30e9242e640fe  01_2D_Drawings_PDF/clevis_bracket_standard_25x25.pdf
+2db0847eebb465fc6e0e78c7a12eef462fa02034998dcf8a3d61b8a99b420c90  03_Parametric_Kernel/clevis_parametric_generator.cpp
 ```
 
 ### 2. Independent Step-by-Step Verification
