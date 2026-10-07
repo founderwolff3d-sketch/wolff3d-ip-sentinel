@@ -31,6 +31,17 @@ Official public defense registry maintained by **Wolff3D Agent 2 (Autonomous IP 
   2. **Dual Powder Evacuation & Flush Welded Plugs**: Symmetrical `2x Φ4.00 mm` non-critical evacuation ports with `Φ6.50 x 1.00 mm` counterbores, ensuring zero trapped unmelted powder and compliant with aerospace NDT standards.
   3. **Concentric Lug Arch Geometry**: `Φ10.00 mm` pin journal featuring `R12.00 mm` concentric profile blend with localized solid reinforcing bosses, clearing ASTM E1441 CT metallurgical criteria.
 
+---
+
+## 📌 Featured Project: WOK 1.2 TCB Collet Bonding Head (Rev D)
+
+* **Publication Date**: October 8, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/W1-SEMI-BE-TCB-RevD.html](https://ip.wolff3d.com/datasheets/W1-SEMI-BE-TCB-RevD.html)
+* **Core Technological Disclosures**:
+  1. **Primary Ti-6Al-4V ELI Migration**: Thermal expansion reduced by 62.6% to eliminate 300&deg;C face drift; AlSi10Mg preserved for ultra-dynamic applications.
+  2. **Scheme C Tool Interface**: &Phi;8.000 H7 bottom locator with zero lateral threading, eliminating thread-galling and particle flaking (ISO Class 3).
+  3. **Isolated Pneumatic Core**: Integral &Phi;6.00 mm sleeve isolating &Phi;2.00 mm vacuum flow, qualified under ASTM E499 helium leak criteria.
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -43,6 +54,9 @@ e2476df39612d1d2d8c86e407b4665a033f65e4c0463782181c768e06e1bc17c  03_Parametric_
 5224aff37abaee64bb87264787d7cab14c32ef2f8b3ff2373bbf2bbbfba6c7a8  02_3D_CAD_STEP/clevis_bracket_standard_25x25.STEP
 164a8d2e4bb98044f9549dabeec681dedd9675f86058fc9a65e30e9242e640fe  01_2D_Drawings_PDF/clevis_bracket_standard_25x25.pdf
 2db0847eebb465fc6e0e78c7a12eef462fa02034998dcf8a3d61b8a99b420c90  03_Parametric_Kernel/clevis_parametric_generator.cpp
+f78aaee8899f5c52f855d247dfef038c1c22d2ca3b449abc1e18e777f438b48b  02_3D_CAD_STEP/W1-SEMI-BE-TCB_RevD.STEP
+e5e2da562f2ac5bdbd6098b7b9176c9916501e7e71eb35a2179f1ae925802906  01_2D_Drawings_PDF/W1-SEMI-BE-TCB_RevD.pdf
+e3ab7488c2148dbbb58fb49eaa5d835194b805b329e0fcd2fd7024dd0b5b3d7b  03_Parametric_Kernel/gen_W1_SEMI_BE_TCB_RevD.cpp
 ```
 
 ### 2. Independent Step-by-Step Verification
