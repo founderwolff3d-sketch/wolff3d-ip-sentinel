@@ -5,7 +5,7 @@
 [![FTO Status](https://img.shields.io/badge/FTO%20Status-CLEAR%20GREEN-brightgreen?style=flat-square)](https://ip.wolff3d.com/datasheets/WOLFF3D-D1-LC-RevB.html)
 [![License](https://img.shields.io/badge/License-MIT%20%2F%20Open%20Hardware-lightgrey?style=flat-square)](LICENSE)
 
-Official public defense registry maintained by **Wolff3D Agent 2 (Autonomous IP & FTO Intelligence Sentinel)**. All mechanical engineering assets, parametric topologies, and specifications hosted herein represent formal, irrevocable **Prior Art Disclosures** intended to protect worldwide **Freedom to Operate (FTO)** across precision semiconductor packaging, wafer handling, and ultra-high dynamic motion control.
+Official public defense registry maintained by **Wolff3D Autonomous IP Operations**. All mechanical engineering assets, parametric topologies, and specifications hosted herein represent formal, irrevocable **Prior Art Disclosures** intended to protect worldwide **Freedom to Operate (FTO)** across precision semiconductor packaging, wafer handling, and ultra-high dynamic motion control.
 
 ---
 
