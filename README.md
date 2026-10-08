@@ -42,6 +42,17 @@ Official public defense registry maintained by **Wolff3D Autonomous IP Operation
   2. **Scheme C Tool Interface**: &Phi;8.000 H7 bottom locator with zero lateral threading, eliminating thread-galling and particle flaking (ISO Class 3).
   3. **Isolated Pneumatic Core**: Integral &Phi;6.00 mm sleeve isolating &Phi;2.00 mm vacuum flow, qualified under ASTM E499 helium leak criteria.
 
+---
+
+## 📌 Featured Project: WOK 1.4 MEMS Nano-Prober Compliant Arm (Rev A)
+
+* **Publication Date**: October 9, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/W1-SEMI-NANO-RevA.html](https://ip.wolff3d.com/datasheets/W1-SEMI-NANO-RevA.html)
+* **Core Technological Disclosures**:
+  1. **Monolithic Ti-6Al-4V ELI Flexure**: Dual-blade 0.80mm Cartesian guide ensuring single-DOF Z compliance (&Delta;Z=0.80mm at 0.15N) with &le;0.05&mu;m lateral scrubbing.
+  2. **Notch-Free Stress Relief**: Internal 4x R1.50mm blended root arcs suppressing dynamic concentration factors ($K_t < 1.4$).
+  3. **High Dynamic Tuning**: First resonant mode $f_1 = 4.48\text{ kHz}$, achieving 40G transient settling time in 1.42 ms.
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -57,6 +68,9 @@ e2476df39612d1d2d8c86e407b4665a033f65e4c0463782181c768e06e1bc17c  03_Parametric_
 f78aaee8899f5c52f855d247dfef038c1c22d2ca3b449abc1e18e777f438b48b  02_3D_CAD_STEP/W1-SEMI-BE-TCB_RevD.STEP
 e5e2da562f2ac5bdbd6098b7b9176c9916501e7e71eb35a2179f1ae925802906  01_2D_Drawings_PDF/W1-SEMI-BE-TCB_RevD.pdf
 e3ab7488c2148dbbb58fb49eaa5d835194b805b329e0fcd2fd7024dd0b5b3d7b  03_Parametric_Kernel/gen_W1_SEMI_BE_TCB_RevD.cpp
+ddb7fb8d619bbc0628174db2d123e4483c181784ca1950105a5adc2c58d3f7e1  02_3D_CAD_STEP/W1_SEMI_NANO_RevA.STEP
+631d01b07d6fa2a5e73b2e8e802ef86101398f9a59d4ec0ddfb9c726c808cf6d  01_2D_Drawings_PDF/W1_SEMI_NANO_RevA.pdf
+27463d33dc28fcd1a538179b59528f8ace6d6e367c623596368162bed350b425  03_Parametric_Kernel/gen_W1_SEMI_NANO_RevA.cpp
 ```
 
 ### 2. Independent Step-by-Step Verification

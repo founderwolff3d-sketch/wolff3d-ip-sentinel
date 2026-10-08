@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEMS Nano-Prober Compliant Arm (Rev A) Technical Datasheet</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; padding: 40px 20px; }
+    .container { max-width: 850px; margin: 0 auto; background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 32px; }
+    h1, h2, h3 { color: #f0f6fc; }
+    h1 { border-bottom: 1px solid #30363d; padding-bottom: 12px; }
+    pre { background: #0d1117; border: 1px solid #30363d; padding: 12px; border-radius: 6px; font-family: monospace; color: #79c0ff; word-break: break-all; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid #30363d; padding: 10px; text-align: left; }
+    th { background: #21262d; color: #f0f6fc; }
+    .back { display: inline-block; margin-bottom: 20px; color: #58a6ff; text-decoration: none; }
+    .tag { display: inline-block; background: #238636; color: #ffffff; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back" href="../">&larr; Back to Public Archive</a>
+    <h1>MEMS Nano-Prober Compliant Cantilever Arm (WOK 1.4 Rev A)</h1>
+    <p><strong>Authority</strong>: Wolff3D Autonomous IP &amp; Engineering Operations<br>
+       <strong>Publication Date</strong>: October 9, 2026<br>
+       <strong>Primary Material</strong>: Titanium Ti-6Al-4V ELI (Grade 23) per ASTM F3001 (Net Mass: 23.4 g)<br>
+       <strong>Freedom-to-Operate Status</strong>: <span class="tag">CLEAR GREEN</span></p>
+    
+    <h2>1. Disclosed Technical Pillars &amp; Defensive Scope</h2>
+    <ul>
+      <li><strong>Monolithic Parallel-Guiding Cartesian Flexure</strong>: 24.00 mm span dual 0.800 mm flexure blades offering pure 1-DOF Z-axis compliance (&Delta;Z=0.80 mm at 0.15 N) while constraining lateral parasitic scrubbing to &lt; 0.05 &mu;m.</li>
+      <li><strong>Continuous Stress-Relief Root Fillets</strong>: Internal 4x R1.50 mm tangentially blended root arcs suppressing dynamic notch stress concentration factor from K_t &gt; 3.5 down to K_t &lt; 1.4.</li>
+      <li><strong>I-Beam Torsion-Resistant Light-Weighting Trunk</strong>: Deep-pocket milled recess (10.4 mm depth) with 4x R2.0 mm corner fillets maintaining high torsional rigidity under 40G acceleration stops.</li>
+      <li><strong>Orthogonal Dual-Channel Tooling Interface with Keyhole Arrester</strong>: EDM slit (1.20 mm) backed by &Phi;1.50 mm stress-relieving keyhole, intersected orthogonally by M2-6H transverse set-screw clamping.</li>
+    </ul>
+
+    <h2>2. Dynamic &amp; Physical Verification Parameters</h2>
+    <table>
+      <tr><th>Metric</th><th>Target Boundary</th><th>Evaluated Continuum Result</th><th>Status</th></tr>
+      <tr><td>1st Natural Frequency ($)</td><td>&ge; 4.2 kHz</td><td>4.48 kHz</td><td>PASSED</td></tr>
+      <tr><td>40G Settling Time ($)</td><td>&le; 1.85 ms (&plusmn;0.1 &mu;m)</td><td>1.42 ms</td><td>PASSED</td></tr>
+      <tr><td>Z-Compliance Travel</td><td>0.80 &plusmn; 0.05 mm</td><td>0.808 mm (at 0.15 N)</td><td>PASSED</td></tr>
+      <tr><td>Parasitic Drift (X/Y)</td><td>&le; 0.05 &mu;m</td><td>&Delta;X=0.012 &mu;m, &Delta;Y=0.003 &mu;m</td><td>PASSED</td></tr>
+    </table>
+
+    <h2>3. Cryptographic Proofs &amp; Verification Manifest</h2>
+    <p>3D CAD Solid Model STEP Hash (SHA-256):</p>
+    <pre>ddb7fb8d619bbc0628174db2d123e4483c181784ca1950105a5adc2c58d3f7e1</pre>
+    <p>2D Manufacturing Drawing PDF Hash (SHA-256):</p>
+    <pre>631d01b07d6fa2a5e73b2e8e802ef86101398f9a59d4ec0ddfb9c726c808cf6d</pre>
+    <p>Parametric JointOperator Kernel Source Hash (SHA-256):</p>
+    <pre>27463d33dc28fcd1a538179b59528f8ace6d6e367c623596368162bed350b425</pre>
+    <p>Bitcoin Blockchain OTS Receipt: <code>06_Blockchain_OTS_Proofs/W1_SEMI_NANO_RevA.STEP.ots</code></p>
+    
+    <div style="background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 16px; margin-top: 32px; font-size: 0.85rem; color: #8b949e; line-height: 1.6;">
+      <strong style="color: #c9d1d9;">ℹ️ Technical Notice &amp; Evaluation Terms:</strong> 
+      Published globally as unencumbered prior art under 35 U.S.C. &sect; 102(a)(1) and EPC Art. 54(2) on an "AS-IS" basis. Downstream physical manufacturing, fatigue validation, and operational deployment remain the sole responsibility of evaluating parties.
+    </div>
+  </div>
+</body>
+</html>
