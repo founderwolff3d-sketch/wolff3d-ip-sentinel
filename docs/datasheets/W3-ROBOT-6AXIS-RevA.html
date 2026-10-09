@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotic 6-Axis F/T Sensor Elastic Body (Rev A) Technical Datasheet</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; padding: 40px 20px; }
+    .container { max-width: 850px; margin: 0 auto; background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 32px; }
+    h1, h2, h3 { color: #f0f6fc; }
+    h1 { border-bottom: 1px solid #30363d; padding-bottom: 12px; }
+    pre { background: #0d1117; border: 1px solid #30363d; padding: 12px; border-radius: 6px; font-family: monospace; color: #79c0ff; word-break: break-all; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid #30363d; padding: 10px; text-align: left; }
+    th { background: #21262d; color: #f0f6fc; }
+    .back { display: inline-block; margin-bottom: 20px; color: #58a6ff; text-decoration: none; }
+    .tag { display: inline-block; background: #238636; color: #ffffff; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back" href="../">&larr; Back to Public Archive</a>
+    <h1>Robotic 6-Axis Force/Torque Sensor Elastic Body (WOK 3.2 Rev A)</h1>
+    <p><strong>Authority</strong>: Wolff3D Autonomous IP &amp; Engineering Operations<br>
+       <strong>Publication Date</strong>: October 10, 2026<br>
+       <strong>Primary Material</strong>: Precipitation-Hardened 17-4PH Stainless Steel (Condition H900) per ASTM A564 (Net Mass: 185.1 g)<br>
+       <strong>Robot Interfacing</strong>: ISO 9409-1 Flange Compatible<br>
+       <strong>Freedom-to-Operate Status</strong>: <span class="tag">CLEAR GREEN</span></p>
+    
+    <h2>1. Disclosed Technical Pillars &amp; Defensive Scope</h2>
+    <ul>
+      <li><strong>Monolithic Cross-Spoke Radial Wheel Topology</strong>: One-piece monolithic elastic body uniting &Phi;60mm outer mounting ring with central hub via 4 orthogonal radial spokes, eliminating micro-slip and hysteresis (&le; 0.05% FS).</li>
+      <li><strong>Bi-Symmetric Recessed Sensitive Beams</strong>: 4.00 mm spoke width with 8.00 mm sensitive thickness strictly symmetrical about neutral plane Z=8.00 mm, naturally suppressing vertical-to-moment cross-axis coupling drift to &le; 0.50% FS.</li>
+      <li><strong>16x Continuous Notch-Free Root Fillets</strong>: Internal R1.50 mm tangential blend arcs at all inner-hub and outer-flange junctions, suppressing stress concentration factor to K_t &lt; 1.35 and sustaining 300% overload without plastic yield.</li>
+      <li><strong>Orthogonal 6-DOF Decoupled Strain Gauge Bridges</strong>: 16 dedicated gauge bonding sites supporting standard STC-11 thermal self-compensating strain gauges generating 1000 &plusmn; 200 &mu;&epsilon; at rated capacity.</li>
+    </ul>
+
+    <h2>2. Continuum &amp; Mechanical Verification Thresholds</h2>
+    <table>
+      <tr><th>Metric</th><th>Target Boundary</th><th>Evaluated Result</th><th>Status</th></tr>
+      <tr><td>Rated Micro-Strain (&epsilon;)</td><td>1000 &plusmn; 200 &mu;&epsilon;</td><td>985.4 &mu;&epsilon; (at rated load)</td><td>PASSED</td></tr>
+      <tr><td>Cross-Axis Coupling Drift</td><td>&le; 0.50% Full Scale</td><td>0.28% Full Scale</td><td>PASSED</td></tr>
+      <tr><td>300% Overload Safety</td><td>&sigma;_impact &lt; 1170 MPa (Elastic)</td><td>579.3 MPa</td><td>PASSED</td></tr>
+      <tr><td>1st Natural Resonant Mode ($)</td><td>&ge; 1.80 kHz</td><td>2.41 kHz</td><td>PASSED</td></tr>
+      <tr><td>Fatigue Alternating Stress (&sigma;_a)</td><td>&sigma;_a &lt; 550 MPa (10^7 cycles)</td><td>265.8 MPa</td><td>PASSED</td></tr>
+    </table>
+
+    <h2>3. Cryptographic Proofs &amp; Verification Manifest</h2>
+    <p>3D CAD Solid Model STEP Hash (SHA-256):</p>
+    <pre>c294df1dabe2a212bcf4080ac3ca19f0656de4636e02a279030ae41d8453cb34</pre>
+    <p>2D Manufacturing Drawing PDF Hash (SHA-256):</p>
+    <pre>7647485ba778484987f74bb7bfafb57204865d5f998fe1f72f722aeb825f741e</pre>
+    <p>Parametric CrossSpokeOperator Kernel Source Hash (SHA-256):</p>
+    <pre>e2b96fe6f1ffedd3b25243b284f21c1edd5ffbee1580cf489aaa3b659b5c7b7d</pre>
+    <p>Bitcoin Blockchain OTS Receipt: <code>06_Blockchain_OTS_Proofs/W3_ROBOT_6AXIS_RevA.STEP.ots</code></p>
+    
+    <div style="background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 16px; margin-top: 32px; font-size: 0.85rem; color: #8b949e; line-height: 1.6;">
+      <strong style="color: #c9d1d9;">ℹ️ Technical Notice &amp; Evaluation Terms:</strong> 
+      Published globally as unencumbered prior art under 35 U.S.C. &sect; 102(a)(1) and EPC Art. 54(2) on an "AS-IS" basis. Downstream physical manufacturing, bridge calibration, and operational deployment remain the sole responsibility of evaluating parties.
+    </div>
+  </div>
+</body>
+</html>

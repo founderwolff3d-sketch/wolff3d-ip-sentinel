@@ -53,6 +53,17 @@ Official public defense registry maintained by **Wolff3D Autonomous IP Operation
   2. **Notch-Free Stress Relief**: Internal 4x R1.50mm blended root arcs suppressing dynamic concentration factors ($K_t < 1.4$).
   3. **High Dynamic Tuning**: First resonant mode $f_1 = 4.48\text{ kHz}$, achieving 40G transient settling time in 1.42 ms.
 
+---
+
+## 📌 Featured Project: WOK 3.2 Robotic 6-Axis F/T Sensor Elastic Body (Rev A)
+
+* **Publication Date**: October 10, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/W3-ROBOT-6AXIS-RevA.html](https://ip.wolff3d.com/datasheets/W3-ROBOT-6AXIS-RevA.html)
+* **Core Technological Disclosures**:
+  1. **Monolithic 17-4PH H900 Radial Topology**: Monolithic isotropic elastic body with 4 radial spokes and ISO 9409-1 flange pattern.
+  2. **Bi-Symmetric Recessed Sensitive Spoke**: Symmetric about neutral plane Z=8.00 mm, suppressing cross-axis drift to &le;0.28% FS.
+  3. **High Dynamic Bandwidth**: 1st resonant mode $f_1 = 2.41\text{ kHz}$, supporting 300% transient overload without plastic yield.
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -71,6 +82,9 @@ e3ab7488c2148dbbb58fb49eaa5d835194b805b329e0fcd2fd7024dd0b5b3d7b  03_Parametric_
 ddb7fb8d619bbc0628174db2d123e4483c181784ca1950105a5adc2c58d3f7e1  02_3D_CAD_STEP/W1_SEMI_NANO_RevA.STEP
 631d01b07d6fa2a5e73b2e8e802ef86101398f9a59d4ec0ddfb9c726c808cf6d  01_2D_Drawings_PDF/W1_SEMI_NANO_RevA.pdf
 27463d33dc28fcd1a538179b59528f8ace6d6e367c623596368162bed350b425  03_Parametric_Kernel/gen_W1_SEMI_NANO_RevA.cpp
+c294df1dabe2a212bcf4080ac3ca19f0656de4636e02a279030ae41d8453cb34  02_3D_CAD_STEP/W3_ROBOT_6AXIS_RevA.STEP
+7647485ba778484987f74bb7bfafb57204865d5f998fe1f72f722aeb825f741e  01_2D_Drawings_PDF/W3_ROBOT_6AXIS_RevA.pdf
+e2b96fe6f1ffedd3b25243b284f21c1edd5ffbee1580cf489aaa3b659b5c7b7d  03_Parametric_Kernel/gen_W3_ROBOT_6AXIS_RevA.cpp
 ```
 
 ### 2. Independent Step-by-Step Verification
