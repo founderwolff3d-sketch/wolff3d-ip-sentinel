@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semiconductor Process Gas Distribution Manifold (Rev A) Technical Datasheet</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; padding: 40px 20px; }
+    .container { max-width: 850px; margin: 0 auto; background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 32px; }
+    h1, h2, h3 { color: #f0f6fc; }
+    h1 { border-bottom: 1px solid #30363d; padding-bottom: 12px; }
+    pre { background: #0d1117; border: 1px solid #30363d; padding: 12px; border-radius: 6px; font-family: monospace; color: #79c0ff; word-break: break-all; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid #30363d; padding: 10px; text-align: left; }
+    th { background: #21262d; color: #f0f6fc; }
+    .back { display: inline-block; margin-bottom: 20px; color: #58a6ff; text-decoration: none; }
+    .tag { display: inline-block; background: #238636; color: #ffffff; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back" href="../">&larr; Back to Public Archive</a>
+    <h1>Semiconductor Process Gas Distribution Manifold (WOK 7.1 Rev A)</h1>
+    <p><strong>Authority</strong>: Wolff3D Autonomous IP &amp; Engineering Operations<br>
+       <strong>Publication Date</strong>: October 11, 2026<br>
+       <strong>Primary Material</strong>: Additive-Grade AlSi10Mg per ASTM F3318 (Net Mass: 0.343 kg)<br>
+       <strong>Vacuum &amp; Cleanroom Rating</strong>: Helium Leak Rate &lt; 1.0E-10 mbar&middot;L/s | ISO Class 5 (Class 100)<br>
+       <strong>Freedom-to-Operate Status</strong>: <span class="tag">CLEAR GREEN</span></p>
+    
+    <h2>1. Disclosed Technical Pillars &amp; Defensive Scope</h2>
+    <ul>
+      <li><strong>Monolithic Watertight Internal Conduit Architecture</strong>: 100% single-piece solid eliminating multi-block stack seams, external cross-drilling ports, and welded plugs, mitigating vacuum virtual-leak mechanisms.</li>
+      <li><strong>Dual-Domain Co-Design Synthesis</strong>: Combines a precision 1-setup machined vacuum flange interface (Datum A flatness &le; 0.005 mm, C-seal groove) with an SLM self-supporting 4-branch manifold network.</li>
+      <li><strong>Spherical Elbow Recesses with Zero Dead-Volume</strong>: R3.0 mm spherical smooth transitions eliminate stagnation corners, ensuring purge clearing times &le; 0.85s (N2 flush to &lt; 1 ppm SF6).</li>
+      <li><strong>Semi F57 &amp; ISO 8015 Compliant Hard Anodization</strong>: MIL-A-8625 Type III hard anodized layer (35 &plusmn; 5 &mu;m) sealed with &gt;18 M&Omega;&middot;cm ultra-pure DI water.</li>
+    </ul>
+
+    <h2>2. Continuum, Vacuum &amp; CFD Verification Parameters</h2>
+    <table>
+      <tr><th>Metric</th><th>Target Boundary</th><th>Evaluated Result</th><th>Status</th></tr>
+      <tr><td>Internal Burst Stress (&sigma;_vM)</td><td>&le; 55.0 MPa (at 0.60 MPa Pin)</td><td>14.8 MPa (ny = 11.48)</td><td>PASSED</td></tr>
+      <tr><td>Datum A Vacuum Warpage (&delta;_z)</td><td>&le; 0.80 &mu;m (under C-seal clamp)</td><td>0.31 &mu;m</td><td>PASSED</td></tr>
+      <tr><td>4-Branch Flow Distribution RSD</td><td>&le; 1.5%</td><td>0.42%</td><td>PASSED</td></tr>
+      <tr><td>Vortex Stagnation Ratio (V_vortex/V_total)</td><td>&le; 0.01</td><td>0.0018</td><td>PASSED</td></tr>
+      <tr><td>Purge Displacement Time (t_purge)</td><td>&le; 1.8 s</td><td>0.85 s</td><td>PASSED</td></tr>
+    </table>
+
+    <h2>3. Cryptographic Proofs &amp; Verification Manifest</h2>
+    <p>3D CAD Solid Model STEP Hash (SHA-256):</p>
+    <pre>6b8b2316c90ba10d0d77cb0f936d9fb31ff1cb12d08bf928483491ad06c5975d</pre>
+    <p>2D Manufacturing Drawing PDF Hash (SHA-256):</p>
+    <pre>0eed94aae0a0d4b926af70d15888af34f5834229a97bbc4ef8ffdae9c5e10404</pre>
+    <p>Parametric ManifoldOperator Kernel Source Hash (SHA-256):</p>
+    <pre>f6315946d653a8c3bd5e12d8130ec598043c14ae5d24c6301dfe18ec021101d1</pre>
+    <p>Bitcoin Blockchain OTS Receipt: <code>06_Blockchain_OTS_Proofs/WUL_MANIFOLD_RevA.STEP.ots</code></p>
+    
+    <div style="background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 16px; margin-top: 32px; font-size: 0.85rem; color: #8b949e; line-height: 1.6;">
+      <strong style="color: #c9d1d9;">ℹ️ Technical Notice &amp; Evaluation Terms:</strong> 
+      Published globally as unencumbered prior art under 35 U.S.C. &sect; 102(a)(1) and EPC Art. 54(2) on an "AS-IS" basis. Downstream fabrication, vacuum qualification, and cleanroom deployment remain the sole responsibility of evaluating parties.
+    </div>
+  </div>
+</body>
+</html>

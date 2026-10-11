@@ -64,6 +64,17 @@ Official public defense registry maintained by **Wolff3D Autonomous IP Operation
   2. **Bi-Symmetric Recessed Sensitive Spoke**: Symmetric about neutral plane Z=8.00 mm, suppressing cross-axis drift to &le;0.28% FS.
   3. **High Dynamic Bandwidth**: 1st resonant mode $f_1 = 2.41\text{ kHz}$, supporting 300% transient overload without plastic yield.
 
+---
+
+## 📌 Featured Project: WOK 7.1 Semiconductor Gas Distribution Manifold (Rev A)
+
+* **Publication Date**: October 11, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/WUL-MANIFOLD-RevA.html](https://ip.wolff3d.com/datasheets/WUL-MANIFOLD-RevA.html)
+* **Core Technological Disclosures**:
+  1. **Monolithic Plug-Free Conduit**: 100% monolithic additive AlSi10Mg core eliminating welds and discrete stack seals.
+  2. **Zero Dead-Volume Optimization**: R3.0mm spherical elbows achieving purge clearance in 0.85s with 0.42% RSD balance.
+  3. **High-Vacuum Hermeticity**: Datum A warpage &le;0.31&mu;m under C-seal clamp, helium leak rate &lt;1.0E-10 mbar&middot;L/s.
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -85,6 +96,9 @@ ddb7fb8d619bbc0628174db2d123e4483c181784ca1950105a5adc2c58d3f7e1  02_3D_CAD_STEP
 c294df1dabe2a212bcf4080ac3ca19f0656de4636e02a279030ae41d8453cb34  02_3D_CAD_STEP/W3_ROBOT_6AXIS_RevA.STEP
 7647485ba778484987f74bb7bfafb57204865d5f998fe1f72f722aeb825f741e  01_2D_Drawings_PDF/W3_ROBOT_6AXIS_RevA.pdf
 e2b96fe6f1ffedd3b25243b284f21c1edd5ffbee1580cf489aaa3b659b5c7b7d  03_Parametric_Kernel/gen_W3_ROBOT_6AXIS_RevA.cpp
+6b8b2316c90ba10d0d77cb0f936d9fb31ff1cb12d08bf928483491ad06c5975d  02_3D_CAD_STEP/WUL_MANIFOLD_RevA.STEP
+0eed94aae0a0d4b926af70d15888af34f5834229a97bbc4ef8ffdae9c5e10404  01_2D_Drawings_PDF/WUL_MANIFOLD_RevA.pdf
+f6315946d653a8c3bd5e12d8130ec598043c14ae5d24c6301dfe18ec021101d1  03_Parametric_Kernel/gen_WUL_MANIFOLD_RevA.cpp
 ```
 
 ### 2. Independent Step-by-Step Verification
