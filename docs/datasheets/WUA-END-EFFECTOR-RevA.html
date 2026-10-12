@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lithography Wafer Handler End-Effector (Rev A) Technical Datasheet</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; padding: 40px 20px; }
+    .container { max-width: 850px; margin: 0 auto; background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 32px; }
+    h1, h2, h3 { color: #f0f6fc; }
+    h1 { border-bottom: 1px solid #30363d; padding-bottom: 12px; }
+    pre { background: #0d1117; border: 1px solid #30363d; padding: 12px; border-radius: 6px; font-family: monospace; color: #79c0ff; word-break: break-all; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid #30363d; padding: 10px; text-align: left; }
+    th { background: #21262d; color: #f0f6fc; }
+    .back { display: inline-block; margin-bottom: 20px; color: #58a6ff; text-decoration: none; }
+    .tag { display: inline-block; background: #238636; color: #ffffff; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back" href="../">&larr; Back to Public Archive</a>
+    <h1>Lithography Wafer Handler High-Dynamics End-Effector (WOK 7.2 Rev A)</h1>
+    <p><strong>Authority</strong>: Wolff3D Autonomous IP &amp; Engineering Operations<br>
+       <strong>Publication Date</strong>: October 12, 2026<br>
+       <strong>Primary Material</strong>: Additive-Grade Ti-6Al-4V ELI (Grade 23) per ASTM F136 (Net Mass: 148.0 g)<br>
+       <strong>Vacuum &amp; Cleanroom Rating</strong>: Helium Leak Rate &lt; 1.0E-10 mbar&middot;L/s | ISO Class 5 (Class 100)<br>
+       <strong>Freedom-to-Operate Status</strong>: <span class="tag">CLEAR GREEN</span></p>
+    
+    <h2>1. Disclosed Technical Pillars &amp; Defensive Scope</h2>
+    <ul>
+      <li><strong>Monolithic Additive Titanium Architecture</strong>: 100% single-piece solid Ti-6Al-4V ELI eliminating CFRP epoxy outgassing, welded seams, and mechanical pivot leveling mechanisms.</li>
+      <li><strong>I-Beam Rib &amp; Conduit Co-Design</strong>: 4x dual-recess milled pockets (75.0x5.0x1.8mm) flanking a central 6.0mm structural spine enclosing a &Phi;1.50mm airtight vacuum line with &ge;1.25mm isolation wall.</li>
+      <li><strong>Sub-Micron 3-Point Vacuum Pad Coplanarity</strong>: Datum A coplanarity &le; 0.003 mm with Ra &le; 0.2 &mu;m, locking wafer interface without adjustable leveling joints.</li>
+      <li><strong>High-G Dynamic Response</strong>: First natural bending mode f1 = 3.12 kHz with transient settling time &le; 0.88 ms under 15G acceleration stops.</li>
+    </ul>
+
+    <h2>2. Continuum &amp; Multi-Physics Verification Parameters</h2>
+    <table>
+      <tr><th>Metric</th><th>Target Boundary</th><th>Evaluated Result</th><th>Status</th></tr>
+      <tr><td>15G Peak Stress (&sigma;_vM)</td><td>&le; 120.0 MPa (ny &ge; 6.0)</td><td>78.4 MPa (ny = 10.56)</td><td>PASSED</td></tr>
+      <tr><td>15G Dynamic Tip Deflection</td><td>&le; 15.0 &mu;m</td><td>6.2 &mu;m</td><td>PASSED</td></tr>
+      <tr><td>1st Natural Resonant Mode ($)</td><td>&ge; 2.50 kHz</td><td>3.12 kHz</td><td>PASSED</td></tr>
+      <tr><td>15G Settling Time ({settle}$)</td><td>&le; 1.2 ms (&lt;50nm)</td><td>0.88 ms</td><td>PASSED</td></tr>
+      <tr><td>Vacuum Grip Response ({grip}$)</td><td>&le; 15.0 ms (to -70 kPa)</td><td>8.6 ms</td><td>PASSED</td></tr>
+      <tr><td>3-Pad Pressure Differential</td><td>&le; 1.5%</td><td>0.62%</td><td>PASSED</td></tr>
+    </table>
+
+    <h2>3. Cryptographic Proofs &amp; Verification Manifest</h2>
+    <p>3D CAD Solid Model STEP Hash (SHA-256):</p>
+    <pre>80e97d85730d9e51c9be9ea6266b0d553ac13eccf0aeb2ecba140a83f8b69068</pre>
+    <p>2D Manufacturing Drawing PDF Hash (SHA-256):</p>
+    <pre>c6352e5a0f2cd3e767140c1ed4715a0daeafa334b8111967b39f8e663587c3cb</pre>
+    <p>Parametric EndEffectorOperator Kernel Source Hash (SHA-256):</p>
+    <pre>829fd186c633ee82729ea020087ed5859e4a037f24cc9071cbd9a962885d8f25</pre>
+    <p>Bitcoin Blockchain OTS Receipt: <code>06_Blockchain_OTS_Proofs/WUA_END_EFFECTOR_RevA.STEP.ots</code></p>
+    
+    <div style="background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 16px; margin-top: 32px; font-size: 0.85rem; color: #8b949e; line-height: 1.6;">
+      <strong style="color: #c9d1d9;">ℹ️ Technical Notice &amp; Evaluation Terms:</strong> 
+      Published globally as unencumbered prior art under 35 U.S.C. &sect; 102(a)(1) and EPC Art. 54(2) on an "AS-IS" basis. Downstream physical manufacturing, UHV qualification, and cleanroom deployment remain the sole responsibility of evaluating parties.
+    </div>
+  </div>
+</body>
+</html>

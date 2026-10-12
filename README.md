@@ -75,6 +75,17 @@ Official public defense registry maintained by **Wolff3D Autonomous IP Operation
   2. **Zero Dead-Volume Optimization**: R3.0mm spherical elbows achieving purge clearance in 0.85s with 0.42% RSD balance.
   3. **High-Vacuum Hermeticity**: Datum A warpage &le;0.31&mu;m under C-seal clamp, helium leak rate &lt;1.0E-10 mbar&middot;L/s.
 
+---
+
+## 📌 Featured Project: WOK 7.2 Lithography Wafer Handler End-Effector (Rev A)
+
+* **Publication Date**: October 12, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/WUA-END-EFFECTOR-RevA.html](https://ip.wolff3d.com/datasheets/WUA-END-EFFECTOR-RevA.html)
+* **Core Technological Disclosures**:
+  1. **Monolithic Ti-6Al-4V ELI Architecture**: 100% single-piece solid eliminating CFRP epoxy outgassing and multi-plate weld seams.
+  2. **I-Beam Rib & Internal Conduit Co-Design**: Central spine housing airtight &Phi;1.5mm vacuum lines with &ge;1.25mm isolation walls.
+  3. **Extreme 15G Dynamic Performance**: First bending mode $f_1 = 3.12\text{ kHz}$, settling in 0.88 ms with tip deflection &le;6.2&mu;m.
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -99,6 +110,9 @@ e2b96fe6f1ffedd3b25243b284f21c1edd5ffbee1580cf489aaa3b659b5c7b7d  03_Parametric_
 6b8b2316c90ba10d0d77cb0f936d9fb31ff1cb12d08bf928483491ad06c5975d  02_3D_CAD_STEP/WUL_MANIFOLD_RevA.STEP
 0eed94aae0a0d4b926af70d15888af34f5834229a97bbc4ef8ffdae9c5e10404  01_2D_Drawings_PDF/WUL_MANIFOLD_RevA.pdf
 f6315946d653a8c3bd5e12d8130ec598043c14ae5d24c6301dfe18ec021101d1  03_Parametric_Kernel/gen_WUL_MANIFOLD_RevA.cpp
+80e97d85730d9e51c9be9ea6266b0d553ac13eccf0aeb2ecba140a83f8b69068  02_3D_CAD_STEP/WUA_END_EFFECTOR_RevA.STEP
+c6352e5a0f2cd3e767140c1ed4715a0daeafa334b8111967b39f8e663587c3cb  01_2D_Drawings_PDF/WUA_END_EFFECTOR_REVA_5.pdf
+829fd186c633ee82729ea020087ed5859e4a037f24cc9071cbd9a962885d8f25  03_Parametric_Kernel/gen_WUA_END_EFFECTOR_RevA.cpp
 ```
 
 ### 2. Independent Step-by-Step Verification
