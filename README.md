@@ -86,6 +86,17 @@ Official public defense registry maintained by **Wolff3D Autonomous IP Operation
   2. **I-Beam Rib & Internal Conduit Co-Design**: Central spine housing airtight &Phi;1.5mm vacuum lines with &ge;1.25mm isolation walls.
   3. **Extreme 15G Dynamic Performance**: First bending mode $f_1 = 3.12\text{ kHz}$, settling in 0.88 ms with tip deflection &le;6.2&mu;m.
 
+---
+
+## 📌 Featured Project: W1-SEMI-FE-STG-XY Dual-Axis Compliant Wafer Chuck Stage (Rev A)
+
+* **Publication Date**: October 14, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/W1-SEMI-STAGE-RevA.html](https://ip.wolff3d.com/datasheets/W1-SEMI-STAGE-RevA.html)
+* **Core Technological Disclosures**:
+  1. **Monolithic Parallelogram Flexure**: 100% single-piece Ti-6Al-4V ELI eliminating bolted leaf spring packs and micro-friction slip under 40G shock.
+  2. **Orthogonal Decoupling Kinematics**: Dual-axis parallel guidance yielding 6550:1 decoupling ratio with &le;0.008&mu;m parasitic cross-talk.
+  3. **Ultra-High Vacuum & Cleanroom Readiness**: ISO Class 3 (Class 1) compliance, helium leak rate &lt;1.0E-10 mbar&middot;L/s.
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -113,6 +124,8 @@ f6315946d653a8c3bd5e12d8130ec598043c14ae5d24c6301dfe18ec021101d1  03_Parametric_
 80e97d85730d9e51c9be9ea6266b0d553ac13eccf0aeb2ecba140a83f8b69068  02_3D_CAD_STEP/WUA_END_EFFECTOR_RevA.STEP
 c6352e5a0f2cd3e767140c1ed4715a0daeafa334b8111967b39f8e663587c3cb  01_2D_Drawings_PDF/WUA_END_EFFECTOR_REVA_5.pdf
 829fd186c633ee82729ea020087ed5859e4a037f24cc9071cbd9a962885d8f25  03_Parametric_Kernel/gen_WUA_END_EFFECTOR_RevA.cpp
+44609e14b4d8b47aa9e91fc950faf7e7c9105e654de6849df0269dd547e5e3b3  02_3D_CAD_STEP/W1-SEMI-FE-STG-XY_RevA.step
+e005810b01eff57375c1fb7c560a195265134f161868771dc21d53b484855b0f  01_2D_Drawings_PDF/W1-SEMI-FE-STG-XY_RevA.pdf
 ```
 
 ### 2. Independent Step-by-Step Verification
