@@ -146,7 +146,7 @@ ots verify 06_Blockchain_OTS_Proofs/SHA256SUMS.txt.ots
 ```text
 ├── 01_2D_Drawings_PDF/       # Vector manufacturing drawings (GD&T, cleanroom standards)
 ├── 02_3D_CAD_STEP/           # Manufacturing AP214 watertight solids (Zero-interference)
-├── 03_Parametric_Kernel/     # OpenCASCADE C++ generation kernels and build scripts
+├── 03_Parametric_Kernel/     # Open Spec parameter registry & geometric boundary schema
 ├── 04_Quality_Gate/          # Quality protocols, FTO element-by-element checklists & BOM
 ├── 05_Solidworks_Native/     # Native SolidWorks 2023 design files (.SLDPRT, .SLDASM, .SLDDRW)
 ├── 06_Blockchain_OTS_Proofs/ # Immutable Bitcoin Merkle branch proofs (.ots) & SHA-256 sums
