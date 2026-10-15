@@ -97,6 +97,17 @@ Official public defense registry maintained by **Wolff3D Autonomous IP Operation
   2. **Orthogonal Decoupling Kinematics**: Dual-axis parallel guidance yielding 6550:1 decoupling ratio with &le;0.008&mu;m parasitic cross-talk.
   3. **Ultra-High Vacuum & Cleanroom Readiness**: ISO Class 3 (Class 1) compliance, helium leak rate &lt;1.0E-10 mbar&middot;L/s.
 
+---
+
+## 📌 Featured Project: W1-AERO-SAT-ADP-350 Spatial Truss Satellite Interstage Adapter (Rev A)
+
+* **Publication Date**: October 15, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/W1-AERO-SAT-ADP-350-RevA.html](https://ip.wolff3d.com/datasheets/W1-AERO-SAT-ADP-350-RevA.html)
+* **Core Technological Disclosures**:
+  1. **Monolithic Additive Skeletal Truss**: 100% single-piece Ti-6Al-4V Grade 5 eliminating composite-to-metal joints and mechanical bolt-latch mechanisms.
+  2. **Aerospace 1-Setup Precision Machining**: Bottom and top flanges with flatness/parallelism &le;0.05 mm and $Ra \le 0.8\mu\text{m}$.
+  3. **Launch Dynamics Compliance**: Withstands 15G static compression ($F_z = -220.7\text{ kN}$) and GEVS 14.1 $G_{rms}$ random vibration with 92.4 Hz axial frequency.
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -126,6 +137,8 @@ c6352e5a0f2cd3e767140c1ed4715a0daeafa334b8111967b39f8e663587c3cb  01_2D_Drawings
 829fd186c633ee82729ea020087ed5859e4a037f24cc9071cbd9a962885d8f25  03_Parametric_Kernel/gen_WUA_END_EFFECTOR_RevA.cpp
 44609e14b4d8b47aa9e91fc950faf7e7c9105e654de6849df0269dd547e5e3b3  02_3D_CAD_STEP/W1-SEMI-FE-STG-XY_RevA.step
 e005810b01eff57375c1fb7c560a195265134f161868771dc21d53b484855b0f  01_2D_Drawings_PDF/W1-SEMI-FE-STG-XY_RevA.pdf
+1c9dfd0123b12682cd3f22a091f144506d723b3e408667e41bf7358722ba2cd8  02_3D_CAD_STEP/W1-AERO-SAT-ADP-350_RevA.STEP
+4162e132677f233cc028e09915cd0e7613befe87b63c61fadf439eacd8fc00f6  01_2D_Drawings_PDF/W1-AERO-SAT-ADP-350_RevA.pdf
 ```
 
 ### 2. Independent Step-by-Step Verification

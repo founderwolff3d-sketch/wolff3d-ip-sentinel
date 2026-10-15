@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spatial Truss Satellite Interstage Adapter (Rev A) Technical Datasheet</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; padding: 40px 20px; }
+    .container { max-width: 850px; margin: 0 auto; background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 32px; }
+    h1, h2, h3 { color: #f0f6fc; }
+    h1 { border-bottom: 1px solid #30363d; padding-bottom: 12px; }
+    pre { background: #0d1117; border: 1px solid #30363d; padding: 12px; border-radius: 6px; font-family: monospace; color: #79c0ff; word-break: break-all; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid #30363d; padding: 10px; text-align: left; }
+    th { background: #21262d; color: #f0f6fc; }
+    .back { display: inline-block; margin-bottom: 20px; color: #58a6ff; text-decoration: none; }
+    .tag { display: inline-block; background: #238636; color: #ffffff; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back" href="../">&larr; Back to Public Archive</a>
+    <h1>Spatial Truss Satellite Interstage Adapter (Taxonomy 2.1 Rev A)</h1>
+    <p><strong>Authority</strong>: Wolff3D Autonomous IP &amp; Engineering Operations<br>
+       <strong>Publication Date</strong>: October 15, 2026<br>
+       <strong>Primary Material</strong>: Aerospace Grade Ti-6Al-4V (Grade 5) per AMS 4928/ASTM F1472 (Net Mass: 7.955 kg)<br>
+       <strong>Testing &amp; QA Standard</strong>: ASTM E1742 Class 1 Radiography | ASTM E1417 FPI Level 3<br>
+       <strong>Freedom-to-Operate Status</strong>: <span class="tag">CLEAR GREEN</span></p>
+    
+    <h2>1. Disclosed Technical Pillars &amp; Defensive Scope</h2>
+    <ul>
+      <li><strong>Monolithic Additive Skeletal Truss</strong>: 100% single-piece solid Ti-6Al-4V Grade 5 interstage adapter unifying 6x spatial diagonal struts and top/bottom mounting flanges via SLM and HIP densification (&gt;99.95%), eliminating composite-to-metal joints and mechanical bolt-latch mechanisms.</li>
+      <li><strong>Principal Stress-Trajectory Optimization</strong>: Smooth spatial strut integration with bottom decoupling root circle (PCD 300.0mm) and top reception circle (PCD 190.0mm), avoiding stress concentrations and mounting interferences.</li>
+      <li><strong>Aerospace 1-Setup Precision Machining</strong>: Bottom flange Datum A (OD 380.0mm) and top flange Datum B (OD 250.0mm) precision milled with flatness and parallelism &le;0.050 mm and Ra &le;0.8 &mu;m.</li>
+      <li><strong>High-Dynamics Launch Endurance</strong>: Withstands 15G axial compression ( = -220.7\text{ kN}$) and 3G lateral shear ({xy} = 44.1\text{ kN}$) under GEVS 14.1 {rms}$ random vibration.</li>
+    </ul>
+
+    <h2>2. Continuum &amp; Multi-Physics Verification Parameters</h2>
+    <table>
+      <tr><th>Metric</th><th>Target Boundary</th><th>Evaluated Result</th><th>Status</th></tr>
+      <tr><td>15G Peak Stress ($\sigma_{vM}$)</td><td>&le; 450.0 MPa ( \ge 1.84$)</td><td>312.4 MPa ( = 2.65$)</td><td>PASSED</td></tr>
+      <tr><td>Euler Linear Buckling Factor</td><td>$\ge 3.00$</td><td>4.12</td><td>PASSED</td></tr>
+      <tr><td>Random Vibration \sigma$ Stress</td><td>&le; 380.0 MPa (Fatigue limit 450 MPa)</td><td>294.5 MPa ( = 0.082$)</td><td>PASSED</td></tr>
+      <tr><td>1st Axial Resonant Frequency ({axial}$)</td><td>$\ge 85.0\text{ Hz}$ (POGO decoupled)</td><td>92.4 Hz</td><td>PASSED</td></tr>
+      <tr><td>1st Lateral Resonant Frequency ({lateral}$)</td><td>$\ge 45.0\text{ Hz}$</td><td>51.2 Hz</td><td>PASSED</td></tr>
+      <tr><td>Flange Contact Stress</td><td>&le; 600.0 MPa (Zero plastic set)</td><td>428.1 MPa</td><td>PASSED</td></tr>
+    </table>
+
+    <h2>3. Cryptographic Proofs &amp; Verification Manifest</h2>
+    <p>3D CAD Solid Model STEP Hash (SHA-256):</p>
+    <pre>1c9dfd0123b12682cd3f22a091f144506d723b3e408667e41bf7358722ba2cd8</pre>
+    <p>2D Manufacturing Drawing PDF Hash (SHA-256):</p>
+    <pre>4162e132677f233cc028e09915cd0e7613befe87b63c61fadf439eacd8fc00f6</pre>
+    <p>Bitcoin Blockchain OTS Receipt: <code>06_Blockchain_OTS_Proofs/W1-AERO-SAT-ADP-350_RevA.STEP.ots</code></p>
+    
+    <div style="background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 16px; margin-top: 32px; font-size: 0.85rem; color: #8b949e; line-height: 1.6;">
+      <strong style="color: #c9d1d9;">ℹ️ Technical Notice &amp; Evaluation Terms:</strong> 
+      Published globally as unencumbered prior art under 35 U.S.C. &sect; 102(a)(1) and EPC Art. 54(2) on an "AS-IS" basis. Downstream physical manufacturing, NDT qualification, and launch integration remain the sole responsibility of evaluating parties.
+    </div>
+  </div>
+</body>
+</html>
