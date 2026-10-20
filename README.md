@@ -119,6 +119,17 @@ Official public defense registry maintained by **Wolff3D Autonomous IP Operation
   2. **Structured Honeycomb Pocket Matrix**: 10-cavity vertical through-pockets with R6.00mm vertical corner reliefs and R3.00mm floor fillets.
   3. **Precision Guide Step Interfaces**: Dual symmetrical lateral mounting steps with flatness &le;0.008 mm and $Ra \le 0.4\mu\text{m}$.
 
+---
+
+## 📌 Featured Project: W3-ROBO-LINK-150 Humanoid Lightweight Robot Link & Actuator Arm (Rev A)
+
+* **Publication Date**: October 21, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/W3-ROBO-LINK-150-RevA.html](https://ip.wolff3d.com/datasheets/W3-ROBO-LINK-150-RevA.html)
+* **Core Technological Disclosures**:
+  1. **Monolithic Subtractive CNC Architecture**: 100% solid 7075-T651 billet achieving 77.3% mass reduction (finished mass: 135.0g).
+  2. **Decoupled Internal Wiring Conduit**: Integrated &Phi;12.0mm horizontal conduit providing zero overlap with bearing floor pockets.
+  3. **High Dynamic Stiffness**: 1st natural frequency &ge;2.15 kHz, supporting &alpha; &ge; 60 rad/s&sup2; (40G shock) and &le;3.5ms settling.
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -152,6 +163,8 @@ e005810b01eff57375c1fb7c560a195265134f161868771dc21d53b484855b0f  01_2D_Drawings
 4162e132677f233cc028e09915cd0e7613befe87b63c61fadf439eacd8fc00f6  01_2D_Drawings_PDF/W1-AERO-SAT-ADP-350_RevA.pdf
 63f3a1e58e8db707154ff7966bdf73c90ca6e0076ff2dc3dcd39038ec12dac09  02_3D_CAD_STEP/W3-CNC-SDL-400_RevA.STEP
 0f07969046c7c9af8bdf7d42668a11a62051791f145edb25e8cd3a24fa025513  01_2D_Drawings_PDF/W3-CNC-SDL-400_RevA.pdf
+c3747c07c8ad2e9c4d74a6e44350f587f6d4ed4a0f723eaceef50b96583f3678  02_3D_CAD_STEP/W3-ROBO-LINK-150_RevA.STEP
+79baeadb4409635d70b65b2dba0211f5df2e826bf9dbd7da88d79d3d29b8767e  01_2D_Drawings_PDF/W3-ROBO-LINK-150_RevA.pdf
 ```
 
 ### 2. Independent Step-by-Step Verification
