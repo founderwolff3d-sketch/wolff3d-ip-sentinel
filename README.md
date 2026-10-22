@@ -130,6 +130,17 @@ Official public defense registry maintained by **Wolff3D Autonomous IP Operation
   2. **Decoupled Internal Wiring Conduit**: Integrated &Phi;12.0mm horizontal conduit providing zero overlap with bearing floor pockets.
   3. **High Dynamic Stiffness**: 1st natural frequency &ge;2.15 kHz, supporting &alpha; &ge; 60 rad/s&sup2; (40G shock) and &le;3.5ms settling.
 
+---
+
+## 📌 Featured Project: W3-FLUID-VALVE-NG6 High-Pressure Servo Valve Subplate (Rev A)
+
+* **Publication Date**: October 22, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/W3-FLUID-VALVE-NG6-RevA.html](https://ip.wolff3d.com/datasheets/W3-FLUID-VALVE-NG6-RevA.html)
+* **Core Technological Disclosures**:
+  1. **Zero-Plug Orthogonal Fluid Circuitry**: Straight cross-drilled passages intersecting at midline, eliminating construction plugs and leak paths under 31.5 MPa service.
+  2. **Open Half-Height Stepped Shoulders**: Four open corner shoulders with R6.0mm blending, ensuring top-down M6 bolt fastening without blade-edge burrs.
+  3. **High-Ratio Lightening**: 560g net mass (-85.3% reduction vs ductile iron) with inter-conduit wall thickness &ge;4.50mm (burst factor n &gt; 2.7).
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -165,6 +176,8 @@ e005810b01eff57375c1fb7c560a195265134f161868771dc21d53b484855b0f  01_2D_Drawings
 0f07969046c7c9af8bdf7d42668a11a62051791f145edb25e8cd3a24fa025513  01_2D_Drawings_PDF/W3-CNC-SDL-400_RevA.pdf
 c3747c07c8ad2e9c4d74a6e44350f587f6d4ed4a0f723eaceef50b96583f3678  02_3D_CAD_STEP/W3-ROBO-LINK-150_RevA.STEP
 79baeadb4409635d70b65b2dba0211f5df2e826bf9dbd7da88d79d3d29b8767e  01_2D_Drawings_PDF/W3-ROBO-LINK-150_RevA.pdf
+3d18578db676a2a09b54919b5a6f2117274774eb7ded8abdba998ef52ad5b889  02_3D_CAD_STEP/W3-FLUID-VALVE-NG6_RevA.STEP
+643e14ef28a48985cb041161ec8e5daae0711718c308bcffa6eefefec6adc011  01_2D_Drawings_PDF/W3-FLUID-VALVE-NG6_RevA.pdf
 ```
 
 ### 2. Independent Step-by-Step Verification
