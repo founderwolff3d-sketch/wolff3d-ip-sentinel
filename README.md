@@ -141,6 +141,17 @@ Official public defense registry maintained by **Wolff3D Autonomous IP Operation
   2. **Open Half-Height Stepped Shoulders**: Four open corner shoulders with R6.0mm blending, ensuring top-down M6 bolt fastening without blade-edge burrs.
   3. **High-Ratio Lightening**: 560g net mass (-85.3% reduction vs ductile iron) with inter-conduit wall thickness &ge;4.50mm (burst factor n &gt; 2.7).
 
+---
+
+## 📌 Featured Project: W3-SURG-GRASPER-5.1 Surgical Robot Atraumatic Micro-Grasper Jaw (Rev A)
+
+* **Publication Date**: October 24, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/W3-SURG-GRASPER-5.1.html](https://ip.wolff3d.com/datasheets/W3-SURG-GRASPER-5.1.html)
+* **Core Technological Disclosures**:
+  1. **Atraumatic Anti-Snag Profile**: 6.34&deg; continuous smooth dorsal ridge and blunt bullnose tip eliminating trocar and tissue catching.
+  2. **Flat-Seat Clevis Hinge Architecture**: Half-thickness step face (1.30mm) with planar contact perimeter around &Phi;0.900 H7 pivot bore.
+  3. **Dual-Pin Asymmetric Kinematic Interface**: Precision dual-pin linkage interface (&Phi;0.900 H7 / &Phi;0.700mm) delivering linear mechanical advantage.
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -178,6 +189,8 @@ c3747c07c8ad2e9c4d74a6e44350f587f6d4ed4a0f723eaceef50b96583f3678  02_3D_CAD_STEP
 79baeadb4409635d70b65b2dba0211f5df2e826bf9dbd7da88d79d3d29b8767e  01_2D_Drawings_PDF/W3-ROBO-LINK-150_RevA.pdf
 3d18578db676a2a09b54919b5a6f2117274774eb7ded8abdba998ef52ad5b889  02_3D_CAD_STEP/W3-FLUID-VALVE-NG6_RevA.STEP
 643e14ef28a48985cb041161ec8e5daae0711718c308bcffa6eefefec6adc011  01_2D_Drawings_PDF/W3-FLUID-VALVE-NG6_RevA.pdf
+427e2b56c21b56b55a58649eb6c5d6b910f58b8bb1792a04b958e11bcffc22ab  02_3D_CAD_STEP/W3-SURG-GRASPER-5.1.STEP
+d2e1bbf30e93524ee32a59b941831ee77da205b24d3fe0c396b118e10b2bd5d6  01_2D_Drawings_PDF/W3-SURG-GRASPER-5.1.pdf
 ```
 
 ### 2. Independent Step-by-Step Verification
