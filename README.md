@@ -152,6 +152,17 @@ Official public defense registry maintained by **Wolff3D Autonomous IP Operation
   2. **Flat-Seat Clevis Hinge Architecture**: Half-thickness step face (1.30mm) with planar contact perimeter around &Phi;0.900 H7 pivot bore.
   3. **Dual-Pin Asymmetric Kinematic Interface**: Precision dual-pin linkage interface (&Phi;0.900 H7 / &Phi;0.700mm) delivering linear mechanical advantage.
 
+---
+
+## 📌 Featured Project: W3-ORTHO-IMPLANT-LCP-5.2 Anatomical Mini Locking Compression Plate (Rev A)
+
+* **Publication Date**: October 28, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/W3-ORTHO-IMPLANT-LCP-5.2.html](https://ip.wolff3d.com/datasheets/W3-ORTHO-IMPLANT-LCP-5.2.html)
+* **Core Technological Disclosures**:
+  1. **Centripetal Mirrored Combi-Holes**: 4x integrated locking/dynamic compression units mirrored toward central fracture datum.
+  2. **Limited-Contact Undersurface Flutes**: 3x transverse flutes (depth 0.22mm, R7.0mm) reducing periosteal contact by 50-60%.
+  3. **Low-Profile Dorsal Crown & MIPO Tips**: R8.0mm upper curvature with tapered lead-in tips (0.75mm) for tendon protection and subcutaneous insertion.
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -191,6 +202,8 @@ c3747c07c8ad2e9c4d74a6e44350f587f6d4ed4a0f723eaceef50b96583f3678  02_3D_CAD_STEP
 643e14ef28a48985cb041161ec8e5daae0711718c308bcffa6eefefec6adc011  01_2D_Drawings_PDF/W3-FLUID-VALVE-NG6_RevA.pdf
 427e2b56c21b56b55a58649eb6c5d6b910f58b8bb1792a04b958e11bcffc22ab  02_3D_CAD_STEP/W3-SURG-GRASPER-5.1.STEP
 d2e1bbf30e93524ee32a59b941831ee77da205b24d3fe0c396b118e10b2bd5d6  01_2D_Drawings_PDF/W3-SURG-GRASPER-5.1.pdf
+277b3f906e37583024bcdf11b762b38da1a90666815feee3328ac94155b06ffd  02_3D_CAD_STEP/W3-ORTHO-IMPLANT-LCP-5.2.STEP
+1428318e513b27e7a35019ab44288103d85aabf4bd88d00ea3aac000c8b11e81  01_2D_Drawings_PDF/W3-ORTHO-IMPLANT-LCP-5.2.pdf
 ```
 
 ### 2. Independent Step-by-Step Verification
