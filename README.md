@@ -163,6 +163,17 @@ Official public defense registry maintained by **Wolff3D Autonomous IP Operation
   2. **Limited-Contact Undersurface Flutes**: 3x transverse flutes (depth 0.22mm, R7.0mm) reducing periosteal contact by 50-60%.
   3. **Low-Profile Dorsal Crown & MIPO Tips**: R8.0mm upper curvature with tapered lead-in tips (0.75mm) for tendon protection and subcutaneous insertion.
 
+---
+
+## 📌 Featured Project: W3-AUTO-COOLING-BASE-4.1 EV Inverter SiC Liquid Cooling Base Plate (Rev A)
+
+* **Publication Date**: November 2, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/W3-AUTO-COOLING-BASE-4.1.html](https://ip.wolff3d.com/datasheets/W3-AUTO-COOLING-BASE-4.1.html)
+* **Core Technological Disclosures**:
+  1. **Parallel Straight-Micro-Fin Array**: 2.5D vertical profile (1.5mm fin, 2.2mm gap, 4.68mm height) keeping &Delta;P &le; 25 kPa at 10 L/min flow.
+  2. **Symmetric Direct-Flow Manifolds**: Dual plenums (130.0 &times; 76.0 &times; 5.50mm) fed by &Phi;10.00mm thru ports, maintaining bridge &Delta;T &le; 2.5&deg;C.
+  3. **Concentric Radiused O-Ring Enclosure**: R2.50mm inner / R5.50mm outer corner radii preventing gasket distortion under 6.0 bar hydrostatic test.
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -204,6 +215,8 @@ c3747c07c8ad2e9c4d74a6e44350f587f6d4ed4a0f723eaceef50b96583f3678  02_3D_CAD_STEP
 d2e1bbf30e93524ee32a59b941831ee77da205b24d3fe0c396b118e10b2bd5d6  01_2D_Drawings_PDF/W3-SURG-GRASPER-5.1.pdf
 277b3f906e37583024bcdf11b762b38da1a90666815feee3328ac94155b06ffd  02_3D_CAD_STEP/W3-ORTHO-IMPLANT-LCP-5.2.STEP
 1428318e513b27e7a35019ab44288103d85aabf4bd88d00ea3aac000c8b11e81  01_2D_Drawings_PDF/W3-ORTHO-IMPLANT-LCP-5.2.pdf
+3090305218906d58ace5628a47ffc727176e4bff44e874b15b026f3b3cafd9a6  02_3D_CAD_STEP/W3-AUTO-COOLING-BASE-4.1.STEP
+9969102a8bb51c1282456f8a05f49641662ef6d22424dc9a3d521ce3218de65b  01_2D_Drawings_PDF/W3-AUTO-COOLING-BASE-4.1.pdf
 ```
 
 ### 2. Independent Step-by-Step Verification
