@@ -174,6 +174,17 @@ Official public defense registry maintained by **Wolff3D Autonomous IP Operation
   2. **Symmetric Direct-Flow Manifolds**: Dual plenums (130.0 &times; 76.0 &times; 5.50mm) fed by &Phi;10.00mm thru ports, maintaining bridge &Delta;T &le; 2.5&deg;C.
   3. **Concentric Radiused O-Ring Enclosure**: R2.50mm inner / R5.50mm outer corner radii preventing gasket distortion under 6.0 bar hydrostatic test.
 
+---
+
+## 📌 Featured Project: W3-ENERGY-WIND-RING-6.1 Wind Turbine Blade Root Transition Ring (Rev A)
+
+* **Publication Date**: November 3, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/W3-ENERGY-WIND-RING-6.1.html](https://ip.wolff3d.com/datasheets/W3-ENERGY-WIND-RING-6.1.html)
+* **Core Technological Disclosures**:
+  1. **Skeletal Truss Stress-Relief Cavities**: 16x &Phi;16.00mm pockets staggered at 11.25&deg;, maintaining &ge;3.10mm shear webs and R &ge; 2.50mm fillets.
+  2. **Bi-Directional Staggered Counterbores**: 16x &Phi;10.50mm holes on PCD 200.00mm with alternating 8 top / 8 bottom counterbores for dynamic moment balancing.
+  3. **Reinforced Stepped Outer Shoulder**: Solid &ge;4.50mm steel backing behind bolt holes eliminating scallop-edge notch fatigue under offshore C5-M conditions.
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -217,6 +228,8 @@ d2e1bbf30e93524ee32a59b941831ee77da205b24d3fe0c396b118e10b2bd5d6  01_2D_Drawings
 1428318e513b27e7a35019ab44288103d85aabf4bd88d00ea3aac000c8b11e81  01_2D_Drawings_PDF/W3-ORTHO-IMPLANT-LCP-5.2.pdf
 3090305218906d58ace5628a47ffc727176e4bff44e874b15b026f3b3cafd9a6  02_3D_CAD_STEP/W3-AUTO-COOLING-BASE-4.1.STEP
 9969102a8bb51c1282456f8a05f49641662ef6d22424dc9a3d521ce3218de65b  01_2D_Drawings_PDF/W3-AUTO-COOLING-BASE-4.1.pdf
+b5185dced8dec65035fcbc482284c4adeb87c1ac29bd6f1a832e3122a72c6bd5  02_3D_CAD_STEP/W3-ENERGY-WIND-RING-6.1.STEP
+04adf07591f7924fe9e5501fed08f53d30a07a72671705730850b9cf6e80751c  01_2D_Drawings_PDF/W3-ENERGY-WIND-RING-6.1.pdf
 ```
 
 ### 2. Independent Step-by-Step Verification
