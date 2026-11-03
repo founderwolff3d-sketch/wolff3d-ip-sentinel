@@ -218,6 +218,17 @@ Official public defense registry maintained by **Wolff3D Autonomous IP Operation
   2. **Solid Mounting Base [A]**: Pocket-free 80 &times; 60mm planar datum preventing structural deflection during high-pressure fluid pulses.
   3. **Direct-Mount Metallic Seal Pockets**: Dual &Phi;14.0mm pockets configured for cryo-compatible metallic C-rings, isolated from corner M6 mounting preload by &ge;6.7mm solid walls.
 
+---
+
+## 📌 Featured Project: W3-AERO-HINGE-BRACKET-2.4 Spacecraft Deployment Hinge Bracket (Rev A)
+
+* **Publication Date**: November 3, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/W3-AERO-HINGE-BRACKET-2.4.html](https://ip.wolff3d.com/datasheets/W3-AERO-HINGE-BRACKET-2.4.html)
+* **Core Technological Disclosures**:
+  1. **Monolithic Twin-Lug Architecture**: 5-axis CNC machined single-piece fork topology (8.0mm base, 14.0mm arms, 12.0mm gap) eliminating multi-part assembly play.
+  2. **First-Octant Bulwark Datum [A]**: Rigid 65 &times; 50mm unpocketed mounting base decoupling corner M4 preload from clevis pivot alignment.
+  3. **Ultra-Quiet High-Coaxial Pivot Pair**: Precision twin-lug bores (&Phi;8.0mm H7) with &le; 0.008mm coaxiality, keeping deployment angular hysteresis &le; 0.05 mrad under 25G flight load.
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -269,6 +280,8 @@ b5185dced8dec65035fcbc482284c4adeb87c1ac29bd6f1a832e3122a72c6bd5  02_3D_CAD_STEP
 d3425884d537cdb8272a5ca2a1e142196ebd584de9133d66c679ca82d4c86478  01_2D_Drawings_PDF/W3-MED-US-HORN-5.4.pdf
 b184a403ee8303bdb4034603f68d2a23ead6b863a31e262a1bca9aca1bd3c09b  02_3D_CAD_STEP/W3-AERO-VALVE-BLOCK-2.3.STEP
 905d32bf064464ad6299182f297185874250dac140de961d0ad7c108105d7299  01_2D_Drawings_PDF/W3-AERO-VALVE-BLOCK-2.3.pdf
+8d378e444513904a82d2efba708ee26fc904b5e0aeef823552e5c4efb11169cb  02_3D_CAD_STEP/W3-AERO-HINGE-BRACKET-2.4.STEP
+56c776e34612c72ea0e0351cf43ca34a09c8201dfb350fb0b4ffd505960321dd  01_2D_Drawings_PDF/W3-AERO-HINGE-BRACKET-2.4.pdf
 ```
 
 ### 2. Independent Step-by-Step Verification
