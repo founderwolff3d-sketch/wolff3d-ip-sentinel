@@ -207,6 +207,17 @@ Official public defense registry maintained by **Wolff3D Autonomous IP Operation
   2. **Solid Nodal Flange &amp; Retention Lips**: 4.5mm thick-walled nodal flange with outer O-ring groove and 2&times;1.5mm solid retaining lips avoiding parasitic resonance (&gt;120 kHz).
   3. **Dual Coaxial Acoustic Interfaces**: High-coaxiality fine threads (M6&times;0.75 / M4&times;0.50 within 0.010mm) and axial polished anti-fatigue finish (Ra &le; 0.4 &mu;m).
 
+---
+
+## 📌 Featured Project: W3-AERO-VALVE-BLOCK-2.3 Aerospace High-Pressure Manifold Block (Rev A)
+
+* **Publication Date**: November 3, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/W3-AERO-VALVE-BLOCK-2.3.html](https://ip.wolff3d.com/datasheets/W3-AERO-VALVE-BLOCK-2.3.html)
+* **Core Technological Disclosures**:
+  1. **Monolithic Zero-Weld Flow Topology**: Gun-drilled straight passages (&Phi;4.0mm &times; &Phi;3.0mm) eliminating welded plugs and leak paths under 350 bar (52.5 MPa proof).
+  2. **Solid Mounting Base [A]**: Pocket-free 80 &times; 60mm planar datum preventing structural deflection during high-pressure fluid pulses.
+  3. **Direct-Mount Metallic Seal Pockets**: Dual &Phi;14.0mm pockets configured for cryo-compatible metallic C-rings, isolated from corner M6 mounting preload by &ge;6.7mm solid walls.
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -256,6 +267,8 @@ b5185dced8dec65035fcbc482284c4adeb87c1ac29bd6f1a832e3122a72c6bd5  02_3D_CAD_STEP
 80e648ba4afd767b769baab08cc2b31b02d24b6d19ed0bf8dee6a5657e68f8ba  01_2D_Drawings_PDF/W3-MED-IVD-MANIFOLD-5.3.pdf
 76034361b061bd10f4bcef83a7c1ca06c862fbfab97eb62db76bfe878a1a78c1  02_3D_CAD_STEP/W3-MED-US-HORN-5.4.STEP
 d3425884d537cdb8272a5ca2a1e142196ebd584de9133d66c679ca82d4c86478  01_2D_Drawings_PDF/W3-MED-US-HORN-5.4.pdf
+b184a403ee8303bdb4034603f68d2a23ead6b863a31e262a1bca9aca1bd3c09b  02_3D_CAD_STEP/W3-AERO-VALVE-BLOCK-2.3.STEP
+905d32bf064464ad6299182f297185874250dac140de961d0ad7c108105d7299  01_2D_Drawings_PDF/W3-AERO-VALVE-BLOCK-2.3.pdf
 ```
 
 ### 2. Independent Step-by-Step Verification
