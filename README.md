@@ -185,6 +185,17 @@ Official public defense registry maintained by **Wolff3D Autonomous IP Operation
   2. **Bi-Directional Staggered Counterbores**: 16x &Phi;10.50mm holes on PCD 200.00mm with alternating 8 top / 8 bottom counterbores for dynamic moment balancing.
   3. **Reinforced Stepped Outer Shoulder**: Solid &ge;4.50mm steel backing behind bolt holes eliminating scallop-edge notch fatigue under offshore C5-M conditions.
 
+---
+
+## 📌 Featured Project: W3-MED-IVD-MANIFOLD-5.3 Desktop IVD Instrument Microfluidic Manifold (Rev A)
+
+* **Publication Date**: November 3, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/W3-MED-IVD-MANIFOLD-5.3.html](https://ip.wolff3d.com/datasheets/W3-MED-IVD-MANIFOLD-5.3.html)
+* **Core Technological Disclosures**:
+  1. **Monolithic Subtractive Microfluidic Network**: 5-axis CNC cross-drilled passages (&Phi;1.60mm / &Phi;1.20mm) keeping total dead volume &lt;15 &mu;L without diffusion bonding.
+  2. **Solid Isothermal Mounting Datum**: Pocket-free planar base (70 &times; 50mm, Datum [B]) providing direct coupling for TEC thermal cycling modules.
+  3. **Direct-Mount Valve Seats with Micro O-Rings**: 3x integrated valve stations with micro O-ring grooves (width 1.60mm, depth 1.20mm) for 4.0 bar leak-tight static sealing.
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -230,6 +241,8 @@ d2e1bbf30e93524ee32a59b941831ee77da205b24d3fe0c396b118e10b2bd5d6  01_2D_Drawings
 9969102a8bb51c1282456f8a05f49641662ef6d22424dc9a3d521ce3218de65b  01_2D_Drawings_PDF/W3-AUTO-COOLING-BASE-4.1.pdf
 b5185dced8dec65035fcbc482284c4adeb87c1ac29bd6f1a832e3122a72c6bd5  02_3D_CAD_STEP/W3-ENERGY-WIND-RING-6.1.STEP
 04adf07591f7924fe9e5501fed08f53d30a07a72671705730850b9cf6e80751c  01_2D_Drawings_PDF/W3-ENERGY-WIND-RING-6.1.pdf
+5300ef34c163b3f1a77dd496fab56111d737a484704f139e7076393244cc0739  02_3D_CAD_STEP/W3-MED-IVD-MANIFOLD-5.3.STEP
+80e648ba4afd767b769baab08cc2b31b02d24b6d19ed0bf8dee6a5657e68f8ba  01_2D_Drawings_PDF/W3-MED-IVD-MANIFOLD-5.3.pdf
 ```
 
 ### 2. Independent Step-by-Step Verification
