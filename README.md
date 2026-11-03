@@ -196,6 +196,17 @@ Official public defense registry maintained by **Wolff3D Autonomous IP Operation
   2. **Solid Isothermal Mounting Datum**: Pocket-free planar base (70 &times; 50mm, Datum [B]) providing direct coupling for TEC thermal cycling modules.
   3. **Direct-Mount Valve Seats with Micro O-Rings**: 3x integrated valve stations with micro O-ring grooves (width 1.60mm, depth 1.20mm) for 4.0 bar leak-tight static sealing.
 
+---
+
+## 📌 Featured Project: W3-MED-US-HORN-5.4 55.5 kHz Ultrasonic Surgical Horn (Rev A)
+
+* **Publication Date**: November 3, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/W3-MED-US-HORN-5.4.html](https://ip.wolff3d.com/datasheets/W3-MED-US-HORN-5.4.html)
+* **Core Technological Disclosures**:
+  1. **Webster Catenoidal Monolithic Profile**: Continuous smooth taper from &Phi;15.0mm to &Phi;5.0mm (gain M &ge; 3.0) eliminating internal reflection and braze joints.
+  2. **Solid Nodal Flange &amp; Retention Lips**: 4.5mm thick-walled nodal flange with outer O-ring groove and 2&times;1.5mm solid retaining lips avoiding parasitic resonance (&gt;120 kHz).
+  3. **Dual Coaxial Acoustic Interfaces**: High-coaxiality fine threads (M6&times;0.75 / M4&times;0.50 within 0.010mm) and axial polished anti-fatigue finish (Ra &le; 0.4 &mu;m).
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -243,6 +254,8 @@ b5185dced8dec65035fcbc482284c4adeb87c1ac29bd6f1a832e3122a72c6bd5  02_3D_CAD_STEP
 04adf07591f7924fe9e5501fed08f53d30a07a72671705730850b9cf6e80751c  01_2D_Drawings_PDF/W3-ENERGY-WIND-RING-6.1.pdf
 5300ef34c163b3f1a77dd496fab56111d737a484704f139e7076393244cc0739  02_3D_CAD_STEP/W3-MED-IVD-MANIFOLD-5.3.STEP
 80e648ba4afd767b769baab08cc2b31b02d24b6d19ed0bf8dee6a5657e68f8ba  01_2D_Drawings_PDF/W3-MED-IVD-MANIFOLD-5.3.pdf
+76034361b061bd10f4bcef83a7c1ca06c862fbfab97eb62db76bfe878a1a78c1  02_3D_CAD_STEP/W3-MED-US-HORN-5.4.STEP
+d3425884d537cdb8272a5ca2a1e142196ebd584de9133d66c679ca82d4c86478  01_2D_Drawings_PDF/W3-MED-US-HORN-5.4.pdf
 ```
 
 ### 2. Independent Step-by-Step Verification
