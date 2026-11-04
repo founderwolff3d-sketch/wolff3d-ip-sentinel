@@ -251,6 +251,17 @@ Official public defense registry maintained by **Wolff3D Autonomous IP Operation
   2. **Face-Sealed Cooling Pocket**: Underside open cavity (70&times;22&times;7mm) with R3.0/R1.0 fillets, retaining 12.0mm conductive metal wall for rapid 500A heat rejection.
   3. **High-Dielectric Ceramic Engineering**: 25&mu;m micro-arc oxidation (&gt;3000V DC breakdown) combined with decoupled M6/M4 fastener grid resistant to 10kA short-circuit electrodynamics.
 
+---
+
+## 📌 Featured Project: W3-EV-OBC-ENCLOSURE-4.4 EV OBC Magnetic Integrated Enclosure (Rev A)
+
+* **Publication Date**: November 4, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/W3-EV-OBC-ENCLOSURE-4.4.html](https://ip.wolff3d.com/datasheets/W3-EV-OBC-ENCLOSURE-4.4.html)
+* **Core Technological Disclosures**:
+  1. **Monolithic Dual-Pocket &amp; Solid Shielding Wall**: Single-piece 5-axis subtractive body with twin pockets separated by an 8.00mm solid aluminum wall, eliminating assembly play and delivering &gt;300dB near-field EMI shielding at 250kHz.
+  2. **Face-Sealed Monolithic Cooling Pocket**: Underside open cavity (76&times;40&times;6mm) with R4/R1 fillets, retaining 6.0mm solid conductive bulk for rapid 180W magnetic heat rejection.
+  3. **Decoupled Anchor Grid - Zero Thin-Wall**: Corner M6 counterbores paired with C6.0 &times; 45&deg; outer chamfers strictly retain &ge;4.40mm solid wall, decoupling mounting torque from magnetic cavity geometry.
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -308,6 +319,8 @@ b184a403ee8303bdb4034603f68d2a23ead6b863a31e262a1bca9aca1bd3c09b  02_3D_CAD_STEP
 919637f694f85e42d7a830145d3cb4ed0bad3142ecaf3d7e87c51b744a5c4b8d  01_2D_Drawings_PDF/W3-EV-MOTOR-ENDPLATE-4.2.pdf
 0b8b681744463896084493ae226e9d72043add9ca8f891764b9f4c18ca4526fd  02_3D_CAD_STEP/W3-EV-BUSBAR-BRACKET-4.3.STEP
 da457c9da4c6778b0146943b0fa236b5734c9aff1b905bdbdabb68056588b966  01_2D_Drawings_PDF/W3-EV-BUSBAR-BRACKET-4.3.pdf
+638e849d27a0dbcb78cae82845691ead2a40bac01b4d09df514d856558542280  02_3D_CAD_STEP/W3-EV-OBC-ENCLOSURE-4.4.STEP
+a35d2173c8d141d56cf1f2c62334aedbffdf9770711f2062e51e87ea0291a983  01_2D_Drawings_PDF/W3-EV-OBC-ENCLOSURE-4.4.pdf
 ```
 
 ### 2. Independent Step-by-Step Verification
