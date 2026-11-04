@@ -273,6 +273,17 @@ Official public defense registry maintained by **Wolff3D Autonomous IP Operation
   2. **High-Precision Bore &amp; Kinematic Seating**: &Phi;32.0mm H6 bore (cylindricity &le; 0.003mm) combined with 120&deg; equispaced 3-point clamping, eliminating over-constraint warping.
   3. **Sub-Micro-Radian Stability**: Low-expansion Invar 36 (CTE &le; 1.2 ppm/K) maintaining optical axis angular drift &Delta;&theta; &lt; 0.05 &mu;rad under thermal and 5G dynamic scanning loads.
 
+---
+
+## 📌 Featured Project: W3-SEMI-WAFER-EFFECTOR-6.3 300mm Wafer Robotic Vacuum Effector (Rev A)
+
+* **Publication Date**: November 4, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/W3-SEMI-WAFER-EFFECTOR-6.3.html](https://ip.wolff3d.com/datasheets/W3-SEMI-WAFER-EFFECTOR-6.3.html)
+* **Core Technological Disclosures**:
+  1. **Monolithic Multi-Pad Suction Topology**: Subtractive twin-finger design with 4 direct-milled pads (&Phi;10 &times; 1.5mm) and &Phi;2.0mm straight ports, avoiding diffusion-bonded inner channels.
+  2. **Static Passive Zero-Marking Layout**: Four-corner distributed stance with C0.20mm edge breaks preventing backside localized stress markings on ultra-thin wafers (&lt;100 &mu;m).
+  3. **High Dynamic Stiffness &amp; ESD Protection**: Dynamic deflection &le; 0.118mm under 3.0G transfer acceleration, paired with ESD PEEK (10^6 - 10^9 &Omega;/sq) for Class 1 cleanroom safety.
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -334,6 +345,8 @@ da457c9da4c6778b0146943b0fa236b5734c9aff1b905bdbdabb68056588b966  01_2D_Drawings
 a35d2173c8d141d56cf1f2c62334aedbffdf9770711f2062e51e87ea0291a983  01_2D_Drawings_PDF/W3-EV-OBC-ENCLOSURE-4.4.pdf
 a0d32bd914368d2a732ecba66f3527845140209aff7fff5170780652eb53ae9b  02_3D_CAD_STEP/W3-SEMI-INTERFERO-MOUNT-6.2.STEP
 ce709739096f1608d0d468a0aa275098de16c883bb1605d7b140af82d48c359b  01_2D_Drawings_PDF/W3-SEMI-INTERFERO-MOUNT-6.2.pdf
+d3699922f98b088329b63014ceedafdfccce0968524ababcfa2f5587a6cabd7e  02_3D_CAD_STEP/W3-SEMI-WAFER-EFFECTOR-6.3.STEP
+698bee298a1d7b88e687c6e34e13dc49559c4a720664c63f94e0357b5613fb1c  01_2D_Drawings_PDF/W3-SEMI-WAFER-EFFECTOR-6.3.pdf
 ```
 
 ### 2. Independent Step-by-Step Verification
