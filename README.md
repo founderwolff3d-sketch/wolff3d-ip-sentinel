@@ -262,6 +262,17 @@ Official public defense registry maintained by **Wolff3D Autonomous IP Operation
   2. **Face-Sealed Monolithic Cooling Pocket**: Underside open cavity (76&times;40&times;6mm) with R4/R1 fillets, retaining 6.0mm solid conductive bulk for rapid 180W magnetic heat rejection.
   3. **Decoupled Anchor Grid - Zero Thin-Wall**: Corner M6 counterbores paired with C6.0 &times; 45&deg; outer chamfers strictly retain &ge;4.40mm solid wall, decoupling mounting torque from magnetic cavity geometry.
 
+---
+
+## 📌 Featured Project: W3-SEMI-INTERFERO-MOUNT-6.2 Lithography Interferometer Mount (Rev A)
+
+* **Publication Date**: November 4, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/W3-SEMI-INTERFERO-MOUNT-6.2.html](https://ip.wolff3d.com/datasheets/W3-SEMI-INTERFERO-MOUNT-6.2.html)
+* **Core Technological Disclosures**:
+  1. **Monolithic Decoupling Ring Groove**: Single-piece deep groove (&Phi;48-58mm &times; depth 18mm) providing &gt;99.2% isolation from external bolt torques and micro-creep.
+  2. **High-Precision Bore &amp; Kinematic Seating**: &Phi;32.0mm H6 bore (cylindricity &le; 0.003mm) combined with 120&deg; equispaced 3-point clamping, eliminating over-constraint warping.
+  3. **Sub-Micro-Radian Stability**: Low-expansion Invar 36 (CTE &le; 1.2 ppm/K) maintaining optical axis angular drift &Delta;&theta; &lt; 0.05 &mu;rad under thermal and 5G dynamic scanning loads.
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -321,6 +332,8 @@ b184a403ee8303bdb4034603f68d2a23ead6b863a31e262a1bca9aca1bd3c09b  02_3D_CAD_STEP
 da457c9da4c6778b0146943b0fa236b5734c9aff1b905bdbdabb68056588b966  01_2D_Drawings_PDF/W3-EV-BUSBAR-BRACKET-4.3.pdf
 638e849d27a0dbcb78cae82845691ead2a40bac01b4d09df514d856558542280  02_3D_CAD_STEP/W3-EV-OBC-ENCLOSURE-4.4.STEP
 a35d2173c8d141d56cf1f2c62334aedbffdf9770711f2062e51e87ea0291a983  01_2D_Drawings_PDF/W3-EV-OBC-ENCLOSURE-4.4.pdf
+a0d32bd914368d2a732ecba66f3527845140209aff7fff5170780652eb53ae9b  02_3D_CAD_STEP/W3-SEMI-INTERFERO-MOUNT-6.2.STEP
+ce709739096f1608d0d468a0aa275098de16c883bb1605d7b140af82d48c359b  01_2D_Drawings_PDF/W3-SEMI-INTERFERO-MOUNT-6.2.pdf
 ```
 
 ### 2. Independent Step-by-Step Verification
