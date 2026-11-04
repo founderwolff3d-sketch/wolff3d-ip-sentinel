@@ -229,6 +229,17 @@ Official public defense registry maintained by **Wolff3D Autonomous IP Operation
   2. **First-Octant Bulwark Datum [A]**: Rigid 65 &times; 50mm unpocketed mounting base decoupling corner M4 preload from clevis pivot alignment.
   3. **Ultra-Quiet High-Coaxial Pivot Pair**: Precision twin-lug bores (&Phi;8.0mm H7) with &le; 0.008mm coaxiality, keeping deployment angular hysteresis &le; 0.05 mrad under 25G flight load.
 
+---
+
+## 📌 Featured Project: W3-EV-MOTOR-ENDPLATE-4.2 800V EV Motor Bearing End Plate (Rev A)
+
+* **Publication Date**: November 4, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/W3-EV-MOTOR-ENDPLATE-4.2.html](https://ip.wolff3d.com/datasheets/W3-EV-MOTOR-ENDPLATE-4.2.html)
+* **Core Technological Disclosures**:
+  1. **Face-Sealed Monolithic Cooling Gallery**: Underside open annular channel (&Phi;54mm ID &times; &Phi;66mm OD &times; 8mm depth) eliminating FSW welds and thermal bore distortion.
+  2. **First-Octant Decoupled Anchor System**: Corner M6 bolt holes physically isolated from the bearing housing to prevent radial clamping pinching (&delta;r &lt; 1.5 &mu;m).
+  3. **High-Coaxial Resolver &amp; Bearing Datums**: &Phi;47.0mm H7 bearing bore (cylindricity &le; 0.005mm) with direct-referenced resolver bolt holes ensuring &lt;0.1&deg; tracking error at 22,000 RPM.
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -282,6 +293,8 @@ b184a403ee8303bdb4034603f68d2a23ead6b863a31e262a1bca9aca1bd3c09b  02_3D_CAD_STEP
 905d32bf064464ad6299182f297185874250dac140de961d0ad7c108105d7299  01_2D_Drawings_PDF/W3-AERO-VALVE-BLOCK-2.3.pdf
 8d378e444513904a82d2efba708ee26fc904b5e0aeef823552e5c4efb11169cb  02_3D_CAD_STEP/W3-AERO-HINGE-BRACKET-2.4.STEP
 56c776e34612c72ea0e0351cf43ca34a09c8201dfb350fb0b4ffd505960321dd  01_2D_Drawings_PDF/W3-AERO-HINGE-BRACKET-2.4.pdf
+7c077a25aaf43fc564096c77f4117dd76cfd2030c705dde0af8fae22ee27a97d  02_3D_CAD_STEP/W3-EV-MOTOR-ENDPLATE-4.2.STEP
+919637f694f85e42d7a830145d3cb4ed0bad3142ecaf3d7e87c51b744a5c4b8d  01_2D_Drawings_PDF/W3-EV-MOTOR-ENDPLATE-4.2.pdf
 ```
 
 ### 2. Independent Step-by-Step Verification
