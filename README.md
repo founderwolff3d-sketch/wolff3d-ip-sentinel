@@ -284,6 +284,17 @@ Official public defense registry maintained by **Wolff3D Autonomous IP Operation
   2. **Static Passive Zero-Marking Layout**: Four-corner distributed stance with C0.20mm edge breaks preventing backside localized stress markings on ultra-thin wafers (&lt;100 &mu;m).
   3. **High Dynamic Stiffness &amp; ESD Protection**: Dynamic deflection &le; 0.118mm under 3.0G transfer acceleration, paired with ESD PEEK (10^6 - 10^9 &Omega;/sq) for Class 1 cleanroom safety.
 
+---
+
+## 📌 Featured Project: W3-SEMI-FLIPCHIP-BONDHEAD-6.4 Flip-Chip Suspension Mount (Rev A)
+
+* **Publication Date**: November 4, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/W3-SEMI-FLIPCHIP-BONDHEAD-6.4.html](https://ip.wolff3d.com/datasheets/W3-SEMI-FLIPCHIP-BONDHEAD-6.4.html)
+* **Core Technological Disclosures**:
+  1. **Monolithic High-Rigidity Mount**: Single-piece 5-axis subtractive block with central &Phi;16.0mm H6 bore (cylindricity &le; 0.002mm) and &Phi;24.0mm collet counterbore, avoiding active piezo tilting mechanisms.
+  2. **Coaxial Stiffening &amp; Weight Reduction**: Symmetric pockets (8 &times; 32 &times; 18mm) reducing mass by &gt;40% with strictly coaxial M3 mounting counterbores, keeping 1st resonant frequency &ge; 1840 Hz.
+  3. **High-G Dynamic Coplanarity**: Maintains angular tilt drift &Delta;&theta; &lt; 1.0 &mu;rad under 20G reciprocating impact, preventing die micro-bump cracking in advanced packaging.
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -347,6 +358,8 @@ a0d32bd914368d2a732ecba66f3527845140209aff7fff5170780652eb53ae9b  02_3D_CAD_STEP
 ce709739096f1608d0d468a0aa275098de16c883bb1605d7b140af82d48c359b  01_2D_Drawings_PDF/W3-SEMI-INTERFERO-MOUNT-6.2.pdf
 d3699922f98b088329b63014ceedafdfccce0968524ababcfa2f5587a6cabd7e  02_3D_CAD_STEP/W3-SEMI-WAFER-EFFECTOR-6.3.STEP
 698bee298a1d7b88e687c6e34e13dc49559c4a720664c63f94e0357b5613fb1c  01_2D_Drawings_PDF/W3-SEMI-WAFER-EFFECTOR-6.3.pdf
+501a87e0a44fcb96a7343da6ba633a5d81190736c75051e28bb0e07563ec01cf  02_3D_CAD_STEP/W3-SEMI-FLIPCHIP-BONDHEAD-6.4.STEP
+aa812d50e503c2e4e22ed7f421511f76a03737250e637a400c67bd4a1dea0b91  01_2D_Drawings_PDF/W3-SEMI-FLIPCHIP-BONDHEAD-6.4.pdf
 ```
 
 ### 2. Independent Step-by-Step Verification
