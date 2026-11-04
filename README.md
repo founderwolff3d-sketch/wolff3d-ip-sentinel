@@ -240,6 +240,17 @@ Official public defense registry maintained by **Wolff3D Autonomous IP Operation
   2. **First-Octant Decoupled Anchor System**: Corner M6 bolt holes physically isolated from the bearing housing to prevent radial clamping pinching (&delta;r &lt; 1.5 &mu;m).
   3. **High-Coaxial Resolver &amp; Bearing Datums**: &Phi;47.0mm H7 bearing bore (cylindricity &le; 0.005mm) with direct-referenced resolver bolt holes ensuring &lt;0.1&deg; tracking error at 22,000 RPM.
 
+---
+
+## 📌 Featured Project: W3-EV-BUSBAR-BRACKET-4.3 800V EV Busbar Thermal Bracket (Rev A)
+
+* **Publication Date**: November 4, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/W3-EV-BUSBAR-BRACKET-4.3.html](https://ip.wolff3d.com/datasheets/W3-EV-BUSBAR-BRACKET-4.3.html)
+* **Core Technological Disclosures**:
+  1. **Monolithic Dual-Rail Slots &amp; Solid Barrier**: 5-axis subtractive dual channels with 6.0mm solid isolation ridge providing &gt;18.0mm creepage distance, eliminating polymer injection molding.
+  2. **Face-Sealed Cooling Pocket**: Underside open cavity (70&times;22&times;7mm) with R3.0/R1.0 fillets, retaining 12.0mm conductive metal wall for rapid 500A heat rejection.
+  3. **High-Dielectric Ceramic Engineering**: 25&mu;m micro-arc oxidation (&gt;3000V DC breakdown) combined with decoupled M6/M4 fastener grid resistant to 10kA short-circuit electrodynamics.
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -295,6 +306,8 @@ b184a403ee8303bdb4034603f68d2a23ead6b863a31e262a1bca9aca1bd3c09b  02_3D_CAD_STEP
 56c776e34612c72ea0e0351cf43ca34a09c8201dfb350fb0b4ffd505960321dd  01_2D_Drawings_PDF/W3-AERO-HINGE-BRACKET-2.4.pdf
 7c077a25aaf43fc564096c77f4117dd76cfd2030c705dde0af8fae22ee27a97d  02_3D_CAD_STEP/W3-EV-MOTOR-ENDPLATE-4.2.STEP
 919637f694f85e42d7a830145d3cb4ed0bad3142ecaf3d7e87c51b744a5c4b8d  01_2D_Drawings_PDF/W3-EV-MOTOR-ENDPLATE-4.2.pdf
+0b8b681744463896084493ae226e9d72043add9ca8f891764b9f4c18ca4526fd  02_3D_CAD_STEP/W3-EV-BUSBAR-BRACKET-4.3.STEP
+da457c9da4c6778b0146943b0fa236b5734c9aff1b905bdbdabb68056588b966  01_2D_Drawings_PDF/W3-EV-BUSBAR-BRACKET-4.3.pdf
 ```
 
 ### 2. Independent Step-by-Step Verification
