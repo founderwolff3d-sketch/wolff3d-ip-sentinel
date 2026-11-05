@@ -328,6 +328,17 @@ Official public defense registry maintained by **Wolff3D Autonomous IP Operation
   2. **Anti-Chatter Tooling Geometry**: Pocket vertical corners carry uniform R8.00mm fillets (&ge;1.33x tool radius of &Phi;12mm endmill), suppressing chatter and preventing chip recutting.
   3. **High-Rigidity Probe Hub &amp; Pre-Anodize CAM Offset**: Central &Phi;120mm through-aperture with 45mm solid hub maintaining probe coplanarity (&Delta;z &lt; 0.8 &mu;m under 1500N), paired with 4x &Phi;10mm H7 dowel bores with +0.030mm CAM offset for 30 &mu;m Type III hard anodizing.
 
+---
+
+## 📌 Featured Project: W3-AERO-THERMAL-CORE-8.2 Hypersonic Copper Manifold (Rev A)
+
+* **Publication Date**: November 5, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/W3-AERO-THERMAL-CORE-8.2.html](https://ip.wolff3d.com/datasheets/W3-AERO-THERMAL-CORE-8.2.html)
+* **Core Technological Disclosures**:
+  1. **Mode 5 Hybrid Metallurgy**: 515nm green-laser SLM CuCr1Zr monolithic build paired with 900&deg;C HIP (density &gt; 99.95%, conductivity &ge; 305 W/m&middot;K), eliminating diffusion-bonded brazed jackets and electroformed shells.
+  2. **45&deg; Self-Supporting Teardrop Channels**: Conformal passages (Dh = 12mm) featuring 45&deg; overhang apexes for 100% support-free additive builds, evacuated via 4x &Phi;4.5mm ports and smoothed via AFM to Ra &le; 1.0 &mu;m.
+  3. **High-Pressure Containment &amp; C-Ring Land**: 44mm solid containment walls resisting 25.0 MPa proof test pressure (safety margin np = 17.5), paired with 4x C-Ring seal lands (Ra &le; 0.4 &mu;m) for sub-nanobar helium hermeticity.
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -399,6 +410,9 @@ fe860f67a58c8089fbb89ccbc6ad3d78867c63ce17c2d2c4175942a493779556  02_3D_CAD_STEP
 e2952dc86cd1b6a646344cf624296826e26a25d652323c88cfa36bdb0934a8d6  01_2D_Drawings_PDF/W3-SEMI-SHUTTLE-FLEXURE-1.2.pdf
 20e039b442c8146ab30d3d3f927374493e5710dfc286637893084a0bce82b348  02_3D_CAD_STEP/W3-SEMI-ATE-BASEPLATE-8.1.STEP
 13b1bc0b22d123a77ff8a510c14987d5df94d543af0afbdc305fe8a01de4e2c0  01_2D_Drawings_PDF/W3-SEMI-ATE-BASEPLATE-8.1.pdf
+e944ae6403d72b2eb83955378d32944bea527c1164af727c387d26d588f8b182  02_3D_CAD_STEP/W3-AERO-THERMAL-CORE-8.2_FINAL_CNC.STEP
+f8ed54a1be97be9410058fa7d072862f7debec8ea1e0ebcea449a09e0f1da496  02_3D_CAD_STEP/W3-AERO-THERMAL-CORE-8.2_NEAR_NET_SLM.STEP
+9efb40074170f90bd5b58223f3d207d7ccad6e315abe8c6fa2f8e1102e6de080  01_2D_Drawings_PDF/W3-AERO-THERMAL-CORE-8.2_FINAL_CNC.pdf
 ```
 
 ### 2. Independent Step-by-Step Verification
