@@ -317,6 +317,17 @@ Official public defense registry maintained by **Wolff3D Autonomous IP Operation
   2. **Notch-Free Vertical Fillets**: Smooth R1.50mm cutout corner transitions suppressing stress concentration (Kt &le; 1.35) and sustaining high-cycle fatigue (nf = 2.84 under 30G / &plusmn;150 &mu;m).
   3. **High-Rigidity Web Isolation**: Central &Phi;12.0mm H7 bore isolated from M3 clamping threads by a 3.75mm solid web, attenuating &gt;98% bolt torque distortion and maintaining parasitic drift &Delta;z &lt; 0.05 &mu;m.
 
+---
+
+## 📌 Featured Project: W3-SEMI-ATE-BASEPLATE-8.1 ATE Gantry Baseplate (Rev A)
+
+* **Publication Date**: November 5, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/W3-SEMI-ATE-BASEPLATE-8.1.html](https://ip.wolff3d.com/datasheets/W3-SEMI-ATE-BASEPLATE-8.1.html)
+* **Core Technological Disclosures**:
+  1. **Mode 1 Pure 3-Axis Subtractive Honeycomb**: 600&times;450&times;45mm 7075-T651 plate (17.85kg net) with 2.5D orthogonal pocketing (depth 30mm, 15mm solid floor, 10mm webs), zero undercuts, and zero sloped holes.
+  2. **Anti-Chatter Tooling Geometry**: Pocket vertical corners carry uniform R8.00mm fillets (&ge;1.33x tool radius of &Phi;12mm endmill), suppressing chatter and preventing chip recutting.
+  3. **High-Rigidity Probe Hub &amp; Pre-Anodize CAM Offset**: Central &Phi;120mm through-aperture with 45mm solid hub maintaining probe coplanarity (&Delta;z &lt; 0.8 &mu;m under 1500N), paired with 4x &Phi;10mm H7 dowel bores with +0.030mm CAM offset for 30 &mu;m Type III hard anodizing.
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -386,6 +397,8 @@ fe860f67a58c8089fbb89ccbc6ad3d78867c63ce17c2d2c4175942a493779556  02_3D_CAD_STEP
 59bc2055d06b66a030d072cfaa497458fabb8e2801ea73b6704e62ededbb96e6  01_2D_Drawings_PDF/W3-3C-PRECISION-JIG-1.3.pdf
 346e4f1db5a6e8a9cd4670103bdc496b67872243298b7340560d1196f9601f25  02_3D_CAD_STEP/W3-SEMI-SHUTTLE-FLEXURE-1.2.STEP
 e2952dc86cd1b6a646344cf624296826e26a25d652323c88cfa36bdb0934a8d6  01_2D_Drawings_PDF/W3-SEMI-SHUTTLE-FLEXURE-1.2.pdf
+20e039b442c8146ab30d3d3f927374493e5710dfc286637893084a0bce82b348  02_3D_CAD_STEP/W3-SEMI-ATE-BASEPLATE-8.1.STEP
+13b1bc0b22d123a77ff8a510c14987d5df94d543af0afbdc305fe8a01de4e2c0  01_2D_Drawings_PDF/W3-SEMI-ATE-BASEPLATE-8.1.pdf
 ```
 
 ### 2. Independent Step-by-Step Verification
