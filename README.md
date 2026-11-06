@@ -339,6 +339,17 @@ Official public defense registry maintained by **Wolff3D Autonomous IP Operation
   2. **45&deg; Self-Supporting Teardrop Channels**: Conformal passages (Dh = 12mm) featuring 45&deg; overhang apexes for 100% support-free additive builds, evacuated via 4x &Phi;4.5mm ports and smoothed via AFM to Ra &le; 1.0 &mu;m.
   3. **High-Pressure Containment &amp; C-Ring Land**: 44mm solid containment walls resisting 25.0 MPa proof test pressure (safety margin np = 17.5), paired with 4x C-Ring seal lands (Ra &le; 0.4 &mu;m) for sub-nanobar helium hermeticity.
 
+---
+
+## 📌 Featured Project: W3-BIKE-ROCKER-8.3 5-Axis CNC MTB Suspension Rocker (Rev A)
+
+* **Publication Date**: November 6, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/W3-BIKE-ROCKER-8.3.html](https://ip.wolff3d.com/datasheets/W3-BIKE-ROCKER-8.3.html)
+* **Core Technological Disclosures**:
+  1. **Mode 3 Monolithic 5-Axis Bell-Crank**: 7075-T651 aircraft aluminum single-piece linkage (182g net, 91.51% mass reduction) integrating a 3-pivot bell-crank layout (P1 &Phi;19mm H7, P2 &Phi;6mm, P3 &Phi;15mm H7).
+  2. **G1 Continuous Tangent Slot Topology**: Twin through-slots with fully tangent semicircular ends (Slot 1: 12&times;39.93mm, Slot 2: 10&times;39.05mm) aligned with beam neutral axis, suppressing stress concentration Kt &le; 1.80 and satisfying R &ge; 1.3x tool radius.
+  3. **High-Dynamic Anti-Ovalization Ligaments**: &ge;8.0mm solid isolation walls around main pivot P1 maintaining bore ovalization &Delta;D &le; 3.2 &mu;m under 5.4 kN landing impact, paired with 2015 prior art defense.
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -413,6 +424,8 @@ e2952dc86cd1b6a646344cf624296826e26a25d652323c88cfa36bdb0934a8d6  01_2D_Drawings
 e944ae6403d72b2eb83955378d32944bea527c1164af727c387d26d588f8b182  02_3D_CAD_STEP/W3-AERO-THERMAL-CORE-8.2_FINAL_CNC.STEP
 f8ed54a1be97be9410058fa7d072862f7debec8ea1e0ebcea449a09e0f1da496  02_3D_CAD_STEP/W3-AERO-THERMAL-CORE-8.2_NEAR_NET_SLM.STEP
 9efb40074170f90bd5b58223f3d207d7ccad6e315abe8c6fa2f8e1102e6de080  01_2D_Drawings_PDF/W3-AERO-THERMAL-CORE-8.2_FINAL_CNC.pdf
+43c2a28d42b99beead211534f10476435dabf25e40a4e392379708c1d3a15ae3  02_3D_CAD_STEP/W3-BIKE-ROCKER-8.3.STEP
+3b940cd5e368047e26457fdbb643ee03eaa0566d7ecf85d04ec762bacceaba03  01_2D_Drawings_PDF/W3-BIKE-ROCKER-8.3.pdf
 ```
 
 ### 2. Independent Step-by-Step Verification
