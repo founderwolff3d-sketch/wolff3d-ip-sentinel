@@ -350,6 +350,17 @@ Official public defense registry maintained by **Wolff3D Autonomous IP Operation
   2. **G1 Continuous Tangent Slot Topology**: Twin through-slots with fully tangent semicircular ends (Slot 1: 12&times;39.93mm, Slot 2: 10&times;39.05mm) aligned with beam neutral axis, suppressing stress concentration Kt &le; 1.80 and satisfying R &ge; 1.3x tool radius.
   3. **High-Dynamic Anti-Ovalization Ligaments**: &ge;8.0mm solid isolation walls around main pivot P1 maintaining bore ovalization &Delta;D &le; 3.2 &mu;m under 5.4 kN landing impact, paired with 2015 prior art defense.
 
+---
+
+## 📌 Featured Project: WOK-EOAT-PARTC-REV3.0-DEF Direct-Mount Vacuum Flange (Rev A)
+
+* **Publication Date**: November 9, 2026
+* **Live Technical Datasheet**: [https://ip.wolff3d.com/datasheets/WOK-EOAT-PARTC-REV3.0-DEF.html](https://ip.wolff3d.com/datasheets/WOK-EOAT-PARTC-REV3.0-DEF.html)
+* **Core Technological Disclosures**:
+  1. **Direct-Mount Part Consolidation**: Monobloc 6061-T6 flange (171.29g, 16.0mm height) eliminating intermediate quick-change adapters; dual SMC ZP2-3050HWS oval suction pads bolt directly onto dual PCD 18.0mm patterns (6x M3).
+  2. **Monolithic Gun-Drilled Pneumatics**: Continuous straight &Phi;6.0mm runner with G 1/8-28 BSPP parallel flat-face gasket ports, retaining &ge;5.0mm solid containment walls and eliminating exposed hosing.
+  3. **Kinematic Decoupling &amp; ISO 50 Wrist Interface**: Direct ISO 9409-1-50-4-M6 coupling with near-zero center of gravity offset (Z=-0.08mm) preventing joint torque overloads under 25.0 kg dynamic payload.
+
 ## 🔐 Cryptographic Integrity & Independent Verification
 
 All engineering release assets are cryptographically anchored to the **Bitcoin Mainnet blockchain** using the [OpenTimestamps (OTS)](https://opentimestamps.org) protocol. Any third party or patent examiner can verify the authenticity and chronological priority of these artifacts.
@@ -426,6 +437,8 @@ f8ed54a1be97be9410058fa7d072862f7debec8ea1e0ebcea449a09e0f1da496  02_3D_CAD_STEP
 9efb40074170f90bd5b58223f3d207d7ccad6e315abe8c6fa2f8e1102e6de080  01_2D_Drawings_PDF/W3-AERO-THERMAL-CORE-8.2_FINAL_CNC.pdf
 43c2a28d42b99beead211534f10476435dabf25e40a4e392379708c1d3a15ae3  02_3D_CAD_STEP/W3-BIKE-ROCKER-8.3.STEP
 3b940cd5e368047e26457fdbb643ee03eaa0566d7ecf85d04ec762bacceaba03  01_2D_Drawings_PDF/W3-BIKE-ROCKER-8.3.pdf
+b6f0fb962071ab06c8567b0a74b2ab2a258a21dd4a1cf847f5c8ed9013c3ca88  02_3D_CAD_STEP/WOK-EOAT-PARTC-REV3.0-DEF.STEP
+8b2c341cc11c115c6c882c51ed1ec43f43208db122ac27308ecfe5fed84fe6e2  01_2D_Drawings_PDF/WOK-EOAT-PARTC-REV3.0-DEF.pdf
 ```
 
 ### 2. Independent Step-by-Step Verification
