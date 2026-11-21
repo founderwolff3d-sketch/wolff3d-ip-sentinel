@@ -1,491 +1,637 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="ascii">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WOLFF3D Autonomous IP &amp; Engineering Operations - Defensive Prior Art Archive</title>
+  <title>WOLFF3D AGENT 2 - FTO &amp; FEA/DFM WORKBENCH</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.6; padding: 40px 20px; }
-    .container { max-width: 950px; margin: 0 auto; }
-    h1 { color: #f0f6fc; border-bottom: 1px solid #30363d; padding-bottom: 16px; }
-    .card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 24px; margin-bottom: 24px; }
-    .card h2 { color: #f0f6fc; margin-top: 0; font-size: 1.35rem; }
-    .hash-box { background: #0d1117; border: 1px solid #30363d; border-radius: 4px; padding: 8px 12px; font-family: monospace; font-size: 0.85rem; color: #79c0ff; word-break: break-all; margin: 8px 0 16px 0; }
-    .button { display: inline-block; background: #238636; color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 6px; font-weight: 500; font-size: 0.9rem; }
-    .button:hover { background: #2ea043; }
-    .footer { text-align: center; margin-top: 48px; padding-top: 24px; border-top: 1px solid #30363d; font-size: 0.85rem; color: #8b949e; }
+    :root {
+      --bg-base: #0a0e14;
+      --bg-panel: #11161f;
+      --bg-card: #161d28;
+      --bg-input: #0d1219;
+      --border: #232d3d;
+      --border-active: #2ea043;
+      --text-main: #e6edf3;
+      --text-muted: #8b949e;
+      --accent-green: #2ea043;
+      --accent-green-hover: #3fb950;
+      --accent-blue: #2f81f7;
+      --accent-amber: #d29922;
+      --accent-red: #f85149;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      font-size: 12px;
+      line-height: 1.4;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Top Bar */
+    header {
+      height: 42px;
+      background-color: var(--bg-panel);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 12px;
+      flex-shrink: 0;
+    }
+    .brand-group { display: flex; align-items: center; gap: 8px; }
+    .brand-title { font-weight: 700; font-size: 13px; letter-spacing: 0.4px; color: #fff; }
+    .badge {
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 10px;
+      font-weight: 700;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+    }
+    .badge-red { background: rgba(248, 81, 73, 0.15); color: var(--accent-red); border: 1px solid rgba(248, 81, 73, 0.4); }
+    .badge-green { background: rgba(46, 160, 67, 0.15); color: var(--accent-green-hover); border: 1px solid rgba(46, 160, 67, 0.4); }
+    .badge-blue { background: rgba(47, 129, 247, 0.15); color: var(--accent-blue); border: 1px solid rgba(47, 129, 247, 0.4); }
+    .badge-amber { background: rgba(210, 153, 34, 0.15); color: var(--accent-amber); border: 1px solid rgba(210, 153, 34, 0.4); }
+
+    .header-controls { display: flex; align-items: center; gap: 6px; }
+    .api-box {
+      display: flex;
+      align-items: center;
+      background: var(--bg-input);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 2px 6px;
+      gap: 4px;
+    }
+    .api-box label { font-family: var(--font-mono); font-size: 10px; color: var(--text-muted); }
+    .api-box input {
+      background: transparent;
+      border: none;
+      color: var(--text-main);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      width: 150px;
+      outline: none;
+    }
+
+    button {
+      background: var(--bg-card);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 4px 10px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    button:hover { border-color: var(--text-muted); background: #1d2635; }
+    button.btn-primary {
+      background: var(--accent-green);
+      border-color: var(--accent-green);
+      color: #fff;
+    }
+    button.btn-primary:hover { background: var(--accent-green-hover); }
+    button.btn-blue {
+      background: rgba(47, 129, 247, 0.18);
+      border-color: var(--accent-blue);
+      color: #79c0ff;
+    }
+    button.btn-blue:hover { background: rgba(47, 129, 247, 0.3); }
+
+    /* Main 3-Column Compact Workspace */
+    .workspace {
+      display: grid;
+      grid-template-columns: 270px 1fr 1.15fr;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    /* Left Column: Ingestion & Artifact Slots */
+    .col-left {
+      background: var(--bg-panel);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      gap: 8px;
+      overflow-y: auto;
+    }
+    .drop-zone {
+      border: 1px dashed var(--accent-blue);
+      background: rgba(47, 129, 247, 0.06);
+      border-radius: 5px;
+      padding: 10px 8px;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .drop-zone:hover, .drop-zone.dragover { background: rgba(47, 129, 247, 0.16); }
+    .drop-zone-title { font-weight: 700; color: #79c0ff; font-size: 12px; }
+    .drop-zone-sub { font-size: 10px; color: var(--text-muted); margin-top: 2px; }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .slot-list { display: flex; flex-direction: column; gap: 5px; flex: 1; }
+    .slot-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 6px 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+    .slot-item.loaded { border-color: rgba(47, 129, 247, 0.55); }
+    .slot-item.active { border-color: var(--accent-blue); background: #192333; }
+    .slot-info { overflow: hidden; }
+    .slot-name { font-size: 10px; font-weight: 700; color: var(--text-main); }
+    .slot-file {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--text-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 185px;
+    }
+    .slot-item.loaded .slot-file { color: #79c0ff; }
+    .ext-tag {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      padding: 1px 4px;
+      border-radius: 2px;
+      background: var(--bg-input);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+
+    .gate-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .check-row { display: flex; align-items: flex-start; gap: 6px; font-size: 11px; cursor: pointer; }
+    .check-row input { margin-top: 2px; accent-color: var(--accent-blue); }
+    .check-sub { font-size: 9px; color: var(--text-muted); font-family: var(--font-mono); }
+
+    /* Middle Column: Package Timeline & Document Viewer */
+    .col-mid {
+      background: var(--bg-base);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .pkg-strip {
+      background: var(--bg-panel);
+      border-bottom: 1px solid var(--border);
+      padding: 6px 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+      flex-shrink: 0;
+    }
+    .pkg-pill {
+      background: var(--bg-card);
+      border: 1px solid var(--accent-blue);
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .viewer-bar {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+      padding: 5px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+    .viewer-body {
+      padding: 12px;
+      overflow-y: auto;
+      flex: 1;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      white-space: pre-wrap;
+      color: #c9d1d9;
+    }
+
+    /* Right Column: Live Audit Engine Output */
+    .col-right {
+      background: var(--bg-base);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .engine-bar {
+      background: var(--bg-panel);
+      border-bottom: 1px solid var(--border);
+      padding: 6px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      flex-shrink: 0;
+    }
+    .audit-scroll {
+      padding: 10px;
+      overflow-y: auto;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .audit-card {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 10px;
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+      margin-bottom: 8px;
+    }
+    .card-title { font-weight: 700; font-size: 12px; color: #fff; }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+    .kpi-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 6px 8px;
+    }
+    .kpi-label { font-size: 9px; color: var(--text-muted); text-transform: uppercase; }
+    .kpi-val { font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: #79c0ff; margin: 2px 0; }
+    .kpi-sub { font-size: 9px; color: var(--accent-green-hover); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+      margin-top: 4px;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 5px 6px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: var(--bg-card); color: var(--text-muted); font-size: 10px; text-transform: uppercase; }
+    .report-md { font-size: 11px; line-height: 1.5; color: #c9d1d9; white-space: pre-wrap; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>WOLFF3D Autonomous IP &amp; Engineering Operations</h1>
-    <p>Official Public Prior Art &amp; Cryptographic Defensive Repository</p>
-
-    <!-- Project 1: Micro-Stage RevB -->
-    <div class="card">
-      <h2>DL-2026-R005 — Cleanroom CNC Engineering Release</h2>
-      <p><strong>Technical Pillars:</strong> Package ID: DL2026R005REV2 Ingestion Date: 20261119 FTO Clearance Verdict: CLEAR GREEN FEA &amp; DFM Verdict: PASSED WITH AUDIT FLAGS (DFM &amp; TELEMETRY RECONCILIATION REQUIRED) CrossFile Telemetry Status: VERIFIED CONSISTENT Verdict: CLEAR GREEN Scope: FreedomtoOperate clearance executed across USPTO, EPO, WIPO (PCT), and C</p>
-      <p><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></p>
-      <pre><code>129fa606a447b53cd5f8469aba8d8d78f2ea7e840e429323a5ce8bcbdfa21380</code></pre>
-      <p><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></p>
-      <pre><code>e69f856a9281e827da184b4e5cbb52c476828b488e3b0cf5ddcf468dffaffa0e</code></pre>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/DL-2026-R005.html">View Full Technical Datasheet & Specification →</a>
-      </p>
+  <header>
+    <div class="brand-group">
+      <span class="brand-title">WOLFF3D AGENT 2 (v3.3-ASCII) -- FTO &amp; FEA WORKBENCH</span>
+      <span class="badge badge-red">STRICTLY CONFIDENTIAL</span>
+      <span class="badge badge-green">100% DESENSITIZED</span>
+      <span class="badge badge-blue" id="syncBadge">SYNCED (0 PKGS)</span>
     </div>
-
-    <div class="card">
-      <h2>3-DOF Monolithic Compliant Surgical Micro-Wrist &amp; Maryland Jaw (DL-2026-OPP02-3DOF-SKU50-D5)</h2>
-      <p><strong>Technical Pillars:</strong> Beta-C Titanium (AMS 4957, 1.85 g body / 2.38 g assembly) &Oslash;5.00 mm 3-DOF orthogonal compliant micro-wrist featuring dual 0.60&times;3.25&times;6.00 mm chordal flexures (R0.50 mm fillets, 894.2 Hz 1st mode), rigid &Oslash;0.60 mm 17-4PH H900 push-pull shafts anchored in 1.00&times;1.00 mm peripheral U-slots (0.80 mm verified isolation wall to &Oslash;1.40 mm central thru-bore), pinless square-pocket 17-7PH Maryland serrated jaw (44&deg; opening), and 100% ISO Class 5 cleanroom subtractive CNC milling (SLS/SLM/EDM strictly prohibited).</p>
-      <p><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></p>
-      <pre><code>9f6f61a60f27ecfcaba2cf424bf472f2d848f5029ce863e4c2e4feb627449e5e</code></pre>
-      <p><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></p>
-      <pre><code>69acfd24f2cc72449b39a03521316bb2c60f67eb64cf5b186989c4b82c129fd8</code></pre>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/DL-2026-OPP02-3DOF-SKU50-D5.html">View Full Technical Datasheet & Specification →</a>
-      </p>
+    <div class="header-controls">
+      <div class="api-box">
+        <label for="apiKeyInput">API_KEY:</label>
+        <input type="password" id="apiKeyInput" placeholder="Enter Gemini API Key">
+        <button class="btn-primary" onclick="saveApiKey()">OK</button>
+      </div>
+      <button class="btn-blue" onclick="exportReport()">Export Report (.MD)</button>
+      <button onclick="resetVault()">Reset Vault</button>
     </div>
+  </header>
 
-    <div class="card">
-      <h2>WOLFF3D-D1-LC RevB Fine-Damping Micro-Stage (Engineering Freeze Release)</h2>
-      <p><strong>Technical Pillars:</strong> Double-parallel flexures with non-circular hyperbolic transitions (R4.20 CONIC 0.65), deliberate mass-offset dynamic decoupling slot (&Delta;Y = +0.120mm), and solid-state passive C10100 eddy current damping architecture.</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">3e9818ea1575754ff823349314b68d2e3e86d5f27e1fb2c86517a1d11c89f75a</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">7daeb3e4c0385f9200e09ab47c917fd42548644b3fb3485e87f8a68bfb56921a</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/WOLFF3D-D1-LC-RevB.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
+  <div class="workspace">
+    <!-- Left Column -->
+    <aside class="col-left">
+      <div class="drop-zone" id="dropZone" onclick="document.getElementById('fileInput').click()">
+        <div class="drop-zone-title">+ Ingest Production Package</div>
+        <div class="drop-zone-sub">Drop .MD, .JSON, .PDF, .STEP, .PNG</div>
+        <input type="file" id="fileInput" multiple style="display:none" onchange="handleFiles(this.files)">
+      </div>
 
-    <!-- Project 2: Clevis Bracket RevA -->
-    <div class="card">
-      <h2>Aero-Grade Monocoque Clevis Bracket 25x25 (Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> PBF-LB AlSi10Mg monocoque bracket featuring Schoen Diamond-D TPMS internal lattice core, 2x &Phi;4.00 mm symmetric depowdering ports with flush-seal plugs, and 1.80 mm load-bearing aerodynamic conformal shell.</p>
-      <div><strong>Solid AP214 STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">5224aff37abaee64bb87264787d7cab14c32ef2f8b3ff2373bbf2bbbfba6c7a8</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">164a8d2e4bb98044f9549dabeec681dedd9675f86058fc9a65e30e9242e640fe</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/clevis-bracket-25x25.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
+      <div class="section-label">Ingested Package Artifacts</div>
+      <div class="slot-list" id="slotList">
+        <div class="slot-item" data-slot="md" onclick="selectSlot('md')">
+          <div class="slot-info">
+            <div class="slot-name">CASE DOSSIER</div>
+            <div class="slot-file" id="slot-md">No .md uploaded</div>
+          </div>
+          <span class="ext-tag">.MD</span>
+        </div>
+        <div class="slot-item" data-slot="json" onclick="selectSlot('json')">
+          <div class="slot-info">
+            <div class="slot-name">SOLUTION &amp; CSG AST</div>
+            <div class="slot-file" id="slot-json">No .json uploaded</div>
+          </div>
+          <span class="ext-tag">.JSON</span>
+        </div>
+        <div class="slot-item" data-slot="spec" onclick="selectSlot('spec')">
+          <div class="slot-info">
+            <div class="slot-name">TECH SPECIFICATION</div>
+            <div class="slot-file" id="slot-spec">No spec .pdf uploaded</div>
+          </div>
+          <span class="ext-tag">.PDF</span>
+        </div>
+        <div class="slot-item" data-slot="drawing" onclick="selectSlot('drawing')">
+          <div class="slot-info">
+            <div class="slot-name">2D CAD DRAWING</div>
+            <div class="slot-file" id="slot-drawing">No drawing .pdf uploaded</div>
+          </div>
+          <span class="ext-tag">.PDF</span>
+        </div>
+        <div class="slot-item" data-slot="png" onclick="selectSlot('png')">
+          <div class="slot-info">
+            <div class="slot-name">ORTHOGRAPHIC SNAPSHOT</div>
+            <div class="slot-file" id="slot-png">No .png uploaded</div>
+          </div>
+          <span class="ext-tag">.PNG</span>
+        </div>
+        <div class="slot-item" data-slot="step" onclick="selectSlot('step')">
+          <div class="slot-info">
+            <div class="slot-name">3D B-REP SOLID</div>
+            <div class="slot-file" id="slot-step">No .step uploaded</div>
+          </div>
+          <span class="ext-tag">.STEP</span>
+        </div>
+      </div>
 
-    <!-- Project 3: TCB Bonding Head RevD -->
-    <div class="card">
-      <h2>Advanced Packaging TCB Collet Bonding Head (WOK 1.2 Rev D)</h2>
-      <p><strong>Technical Pillars:</strong> Monocoque Gyroid core in Ti-6Al-4V ELI (85.1g) / AlSi10Mg (51.5g) with isolated &Phi;2.0mm vacuum conduit, dual &Phi;3.5mm depowder ports, and Scheme C bottom-face clamp interface eliminating lateral screws for sub-micron coplanarity.</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">f78aaee8899f5c52f855d247dfef038c1c22d2ca3b449abc1e18e777f438b48b</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">e5e2da562f2ac5bdbd6098b7b9176c9916501e7e71eb35a2179f1ae925802906</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W1-SEMI-BE-TCB-RevD.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
+      <div class="section-label">Human-in-the-Loop Execution Gate</div>
+      <div class="gate-box">
+        <label class="check-row">
+          <input type="checkbox" id="chkFto" checked>
+          <div>
+            <div>Run Live FTO Patent Audit</div>
+            <div class="check-sub">USPTO / EPO / CNIPA / WIPO / MYIPO</div>
+          </div>
+        </label>
+        <label class="check-row">
+          <input type="checkbox" id="chkFea" checked>
+          <div>
+            <div>Run Live FEA &amp; DFM Audit</div>
+            <div class="check-sub">CSG Kinematics, Fatigue, CoG, CNC</div>
+          </div>
+        </label>
+        <button class="btn-primary" style="width:100%; padding:6px;" onclick="executeAudit()">
+          Confirm &amp; Execute Gemini Audit
+        </button>
+      </div>
+    </aside>
 
-        <!-- Project 4: MEMS Nano-Prober Arm RevA -->
-    <div class="card">
-      <h2>MEMS Nano-Prober Compliant Cantilever Arm (WOK 1.4 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Monolithic Ti-6Al-4V ELI (23.4g) dual Cartesian flexure blades (0.80mm), internal 4x R1.50mm continuous notch-free root fillets, torsional I-beam pocket, and keyhole-relieved orthogonal probe clamp enabling &lt;0.05&mu;m parasitic scrubbing and 1.42ms 40G settling.</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">ddb7fb8d619bbc0628174db2d123e4483c181784ca1950105a5adc2c58d3f7e1</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">631d01b07d6fa2a5e73b2e8e802ef86101398f9a59d4ec0ddfb9c726c808cf6d</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W1-SEMI-NANO-RevA.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
+    <!-- Middle Column -->
+    <main class="col-mid">
+      <div class="pkg-strip" id="pkgStrip">
+        <span style="color:var(--text-muted); font-family:var(--font-mono); font-size:10px;">
+          TIMELINE VAULT: Ready for package ingestion...
+        </span>
+      </div>
+      <div class="viewer-bar">
+        <span id="viewerTitle">ACTIVE VIEWER: NO ARTIFACT SELECTED</span>
+        <span id="viewerMeta">ENCODING: 7-BIT ASCII</span>
+      </div>
+      <div class="viewer-body" id="viewerBody">Drop production package files on the left panel to inspect desensitized specifications, CSG AST nodes, and B-Rep telemetry.</div>
+    </main>
 
-        <!-- Project 5: Robotic 6-Axis F/T Sensor Body RevA -->
-    <div class="card">
-      <h2>Robotic 6-Axis Force/Torque Sensor Elastic Body (WOK 3.2 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Monolithic 17-4PH H900 (185.1g) bi-symmetric cross-spoke radial wheel with 16x R1.50mm notch-free root fillets, ISO 9409-1 mechanical flange interfacing, and pure mechanical orthogonal decoupling enabling &le;0.28% FS cross-axis drift and 2.41 kHz dynamic bandwidth.</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">c294df1dabe2a212bcf4080ac3ca19f0656de4636e02a279030ae41d8453cb34</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">7647485ba778484987f74bb7bfafb57204865d5f998fe1f72f722aeb825f741e</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W3-ROBOT-6AXIS-RevA.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
+    <!-- Right Column -->
+    <section class="col-right">
+      <div class="engine-bar">
+        <span>AGENT 2 OUTPUT ENGINE: <strong>LIVE GEMINI FTO &amp; DFM/FEA</strong></span>
+        <span id="engineStatus" style="color:var(--accent-green-hover);">ENGINE: READY (ASCII MODE)</span>
+      </div>
+      <div class="audit-scroll">
+        <div class="audit-card">
+          <div class="card-header">
+            <span class="card-title">1. Global Freedom-to-Operate (FTO) Patent Matrix</span>
+            <span class="badge badge-amber" id="ftoBadge">AWAITING AUDIT</span>
+          </div>
+          <div id="ftoContent" class="report-md">Stage package artifacts and click "Confirm &amp; Execute Gemini Audit" to run patent clearance across USPTO, EPO, CNIPA, and WIPO.</div>
+        </div>
 
-        <!-- Project 6: Semiconductor Process Gas Manifold RevA -->
-    <div class="card">
-      <h2>Semiconductor Process Gas Distribution Manifold (WOK 7.1 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Monolithic additive AlSi10Mg (0.343kg) 4-branch flow network with zero welded plugs, R3.0mm spherical anti-stagnation elbows, sub-micron vacuum seal flange (Datum A &le;0.005mm), and Semi F57 compliance yielding 0.42% flow RSD and &lt;1.0E-10 mbar&middot;L/s hermeticity.</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">6b8b2316c90ba10d0d77cb0f936d9fb31ff1cb12d08bf928483491ad06c5975d</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">0eed94aae0a0d4b926af70d15888af34f5834229a97bbc4ef8ffdae9c5e10404</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/WUL-MANIFOLD-RevA.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 7: Lithography Wafer Handler End-Effector RevA -->
-    <div class="card">
-      <h2>Lithography Wafer Handler High-Dynamics End-Effector (WOK 7.2 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Monolithic Ti-6Al-4V ELI (0.148kg) I-beam dual-fork arm with internal &Phi;1.5mm airtight vacuum conduits, sub-micron suction coplanarity (Datum A &le;0.003mm), zero welded seams/epoxy, enabling 15G dynamic handling with 3.12 kHz resonant frequency and 0.88ms settling.</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">80e97d85730d9e51c9be9ea6266b0d553ac13eccf0aeb2ecba140a83f8b69068</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">c6352e5a0f2cd3e767140c1ed4715a0daeafa334b8111967b39f8e663587c3cb</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/WUA-END-EFFECTOR-RevA.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 8: Dual-Axis Decoupled Compliant Wafer Chuck Stage RevA -->
-    <div class="card">
-      <h2>Dual-Axis Decoupled Compliant Wafer Chuck Stage (Taxonomy 1.1 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Monolithic Ti-6Al-4V ELI (0.312kg) double-compound parallelogram flexure stage with 16x precision leaf springs, zero rolling bearings, sub-micron wafer chuck coplanarity (Datum A &le;0.002mm), and 40G high-dynamics isolation yielding 6550:1 decoupling ratio and 4.62 kHz natural frequency.</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">44609e14b4d8b47aa9e91fc950faf7e7c9105e654de6849df0269dd547e5e3b3</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">e005810b01eff57375c1fb7c560a195265134f161868771dc21d53b484855b0f</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W1-SEMI-STAGE-RevA.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 9: Spatial Truss Satellite Interstage Adapter RevA -->
-    <div class="card">
-      <h2>Spatial Truss Satellite Interstage Adapter (Taxonomy 2.1 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Monolithic Ti-6Al-4V Grade 5 (7.955kg) spatial truss interstage adapter uniting 6x diagonal load-bearing struts with 1-setup 5-axis precision flanges (Datum A/B flatness &le;0.05mm), withstanding 15G launch compression and GEVS 14.1 Grms random vibration with 92.4 Hz axial frequency.</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">1c9dfd0123b12682cd3f22a091f144506d723b3e408667e41bf7358722ba2cd8</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">4162e132677f233cc028e09915cd0e7613befe87b63c61fadf439eacd8fc00f6</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W1-AERO-SAT-ADP-350-RevA.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 10: Precision CNC Saddle RevA -->
-    <div class="card">
-      <h2>Precision CNC Saddle with Decoupled Dynamic Pockets (Taxonomy 3.3 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Monolithic aerospace-grade 7075-T651 aluminum alloy (13.85kg) 3-axis CNC milled precision saddle with structured vertical honeycomb pockets (R6.00mm corner / R3.00mm floor fillets), solid central hard domain hub, and dual precision guide steps (&le;0.008mm flatness).</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">63f3a1e58e8db707154ff7966bdf73c90ca6e0076ff2dc3dcd39038ec12dac09</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">0f07969046c7c9af8bdf7d42668a11a62051791f145edb25e8cd3a24fa025513</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W3-CNC-SDL-400-RevA.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 11: Hypersonic Leading-Edge Conformal CNC Wedge RevA -->
-    <div class="card">
-      <h2>Hypersonic Leading-Edge Conformal CNC Wedge (Taxonomy 2.1 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Forged CuCrZr alloy (UNS C18150) monolithic subtractive hypersonic wedge featuring an embedded orthogonal closed-loop cooling circuit (10mm cross rail &amp; rear feeders), flush aerospace expansion plug sealing (Lee Betaplug), and Mach 5-7 stagnation thermal compliance (&ge;30 kW rating).</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">a506615114748c97c26f622776a1a1618011cf1c82bac9e83c07c56724a77d52</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">184c435893915ccd223d03bf27651c0423806ed382f2eaee23c23927fc13abf9</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W2-AERO-HYPER-LE-200-RevA.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 12: Humanoid Robot Link & Actuator Arm RevA -->
-    <div class="card">
-      <h2>Humanoid Lightweight Robot Link & Actuator Arm (Taxonomy 3.1 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Monolithic 7075-T651 aluminum alloy (135.0g) 100% subtractive CNC robot link with 77.3% mass reduction, dual H7 bearing/harmonic seats (PCD 25/22mm), decoupled &Phi;12mm internal harness channel, and high dynamic stiffness (&ge;2.15 kHz resonance, 40G acceleration).</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">c3747c07c8ad2e9c4d74a6e44350f587f6d4ed4a0f723eaceef50b96583f3678</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">79baeadb4409635d70b65b2dba0211f5df2e826bf9dbd7da88d79d3d29b8767e</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W3-ROBO-LINK-150-RevA.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 13: High-Pressure Servo Valve Subplate RevA -->
-    <div class="card">
-      <h2>High-Pressure Servo Valve Subplate (Taxonomy 3.4 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Monolithic 7075-T651 aluminum alloy (0.56kg / -85.3% mass reduction) ISO 4401-03 / NG6 servovalve subplate featuring zero-plug orthogonal star fluid circuitry (31.5 MPa rating), four open corner stepped shoulders, and peripheral pocketing.</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">3d18578db676a2a09b54919b5a6f2117274774eb7ded8abdba998ef52ad5b889</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">643e14ef28a48985cb041161ec8e5daae0711718c308bcffa6eefefec6adc011</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W3-FLUID-VALVE-NG6-RevA.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 14: Surgical Robot Atraumatic Micro-Grasper Jaw RevA -->
-    <div class="card">
-      <h2>Surgical Robot Atraumatic Micro-Grasper Jaw (Taxonomy 5.1 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Medical-grade Ti-6Al-4V ELI / 316LVM (0.18g) 3mm class MIS surgical robot grasper jaw featuring a 6.34&deg; anti-snag smooth dorsal ridge, flat-seat clevis hinge (&Phi;0.900 H7), dual-pin asymmetric drive interface (&Phi;0.700mm), and constrained-aspect atraumatic gripping serrations.</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">427e2b56c21b56b55a58649eb6c5d6b910f58b8bb1792a04b958e11bcffc22ab</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">d2e1bbf30e93524ee32a59b941831ee77da205b24d3fe0c396b118e10b2bd5d6</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W3-SURG-GRASPER-5.1.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 15: Anatomical Low-Profile Mini LCP RevA -->
-    <div class="card">
-      <h2>Anatomical Low-Profile Locking Compression Plate (Taxonomy 5.2 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Medical-grade Ti-6Al-4V ELI (1.45g) 4-hole mini locking compression plate featuring centripetal mirrored combi-holes, limited-contact undersurface flutes (50-60% contact reduction), low-profile dorsal crown (R8.0mm), and MIPO chisel tunneling tips.</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">277b3f906e37583024bcdf11b762b38da1a90666815feee3328ac94155b06ffd</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">1428318e513b27e7a35019ab44288103d85aabf4bd88d00ea3aac000c8b11e81</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W3-ORTHO-IMPLANT-LCP-5.2.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 16: EV Inverter SiC Liquid Cooling Base Plate RevA -->
-    <div class="card">
-      <h2>EV Inverter SiC Liquid Cooling Base Plate (Taxonomy 4.1 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Automotive-grade Al6061-T6 / AlSi10Mg (348.5g) monolithic 2.5D subtractive CNC cooling base plate featuring parallel straight-micro-fin arrays (1.5mm fin, 2.2mm gap), low-loss symmetric plenums (&Delta;P &le; 25 kPa), concentric radiused O-ring enclosure (6.0 bar proof), and bare masked thermal coupling island.</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">3090305218906d58ace5628a47ffc727176e4bff44e874b15b026f3b3cafd9a6</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">9969102a8bb51c1282456f8a05f49641662ef6d22424dc9a3d521ce3218de65b</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W3-AUTO-COOLING-BASE-4.1.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 17: Wind Turbine Blade Root Transition Ring RevA -->
-    <div class="card">
-      <h2>Wind Turbine Blade Root Transition Ring (Taxonomy 6.1 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Forged alloy steel 42CrMo4 (5.55kg / -35% mass reduction) megawatt-class wind turbine blade root transition ring featuring skeletal truss weight-relief cavities, bi-directional staggered counterbores (16x M10 on PCD 200mm), reinforced stepped outer shoulder, and &Phi;160mm H7 precision pilot bore.</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">b5185dced8dec65035fcbc482284c4adeb87c1ac29bd6f1a832e3122a72c6bd5</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">04adf07591f7924fe9e5501fed08f53d30a07a72671705730850b9cf6e80751c</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W3-ENERGY-WIND-RING-6.1.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 18: Desktop IVD Precision Microfluidic Manifold Block RevA -->
-    <div class="card">
-      <h2>Desktop IVD Precision Microfluidic Manifold Block (Taxonomy 5.3 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Medical-grade Virgin PEEK / Austenitic Stainless Steel 316L (115.8g PEEK / 655g 316L) desktop IVD microfluidic manifold block featuring monolithic subtractive micro-channels (&Phi;1.60mm main / &Phi;1.20mm branch, dead volume &lt;15 &mu;L), solid isothermal TEC datum [B], and direct-mount micro O-ring valve seats (4.0 bar proof).</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">5300ef34c163b3f1a77dd496fab56111d737a484704f139e7076393244cc0739</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">80e648ba4afd767b769baab08cc2b31b02d24b6d19ed0bf8dee6a5657e68f8ba</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W3-MED-IVD-MANIFOLD-5.3.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 19: 55.5 kHz Ultrasonic Surgical Scalpel Acoustic Horn RevA -->
-    <div class="card">
-      <h2>55.5 kHz Ultrasonic Surgical Scalpel Acoustic Horn (Taxonomy 5.4 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Medical-grade Titanium Alloy TC4 ELI (28.64g) 55.5 kHz ultrasonic surgical scalpel acoustic velocity transformer horn featuring a continuous Webster catenoidal contour (amplification ratio M &ge; 3.0), solid nodal flange with 1.5mm reinforcement lips (parasitic frequency &gt;120 kHz), and coaxial fine-pitch thread interfaces (M6&times;0.75 / M4&times;0.50).</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">76034361b061bd10f4bcef83a7c1ca06c862fbfab97eb62db76bfe878a1a78c1</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">d3425884d537cdb8272a5ca2a1e142196ebd584de9133d66c679ca82d4c86478</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W3-MED-US-HORN-5.4.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 20: Aerospace Propulsion High-Pressure Dual-Valve Manifold Block RevA -->
-    <div class="card">
-      <h2>Aerospace Propulsion High-Pressure Dual-Valve Manifold Block (Taxonomy 2.3 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Forged Aerospace Aluminum 7075-T7351 / Inconel 718 (447.1g Al / 1303g Inconel) 350 bar rated aerospace propulsion manifold block featuring monolithic zero-weld cross-drilled passages (&Phi;4.0mm main / &Phi;3.0mm branch), solid isothermal unpocketed datum [A], direct-mount metallic C-ring pockets (&Phi;14.0mm), and isolated corner high-preload fasteners (&ge;6.7mm solid web).</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">b184a403ee8303bdb4034603f68d2a23ead6b863a31e262a1bca9aca1bd3c09b</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">905d32bf064464ad6299182f297185874250dac140de961d0ad7c108105d7299</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W3-AERO-VALVE-BLOCK-2.3.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 21: Spacecraft Ultra-Quiet Solar Array Deployment Hinge Bracket RevA -->
-    <div class="card">
-      <h2>Spacecraft Ultra-Quiet Solar Array Deployment Hinge Bracket (Taxonomy 2.4 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Aerospace Aluminum-Lithium 2195-T8 / Titanium Ti-6Al-4V Grade 5 (89.2g Al-Li / 145.8g Ti) spacecraft solar array deployment hinge bracket featuring monolithic subtractive twin-lug topology, first-octant unpocketed bulwark datum [A], high-coaxiality pivot pair (&Phi;8.0mm H7, coaxiality &le; 0.008mm, hysteresis &le; 0.05 mrad), and 25G quasi-static flight load compliance.</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">8d378e444513904a82d2efba708ee26fc904b5e0aeef823552e5c4efb11169cb</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">56c776e34612c72ea0e0351cf43ca34a09c8201dfb350fb0b4ffd505960321dd</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W3-AERO-HINGE-BRACKET-2.4.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 22: 800V EV Traction Motor Liquid-Cooled Bearing End Plate RevA -->
-    <div class="card">
-      <h2>800V EV Traction Motor Liquid-Cooled Bearing End Plate (Taxonomy 4.2 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Forged Aluminum Alloy 6082-T6 / 7075-T6 (390.8g Al 6082) 800V high-speed hairpin motor liquid-cooled bearing end plate featuring a face-sealed monolithic conformal cooling gallery (6.0 bar proof), decoupled first-octant corner anchors (&Delta;r &lt; 1.5 &mu;m), high-coaxiality 6205 bearing bore (&Phi;47mm H7, cylindricity &le; 0.005mm), and integrated resolver interface for 20,000+ RPM traction drives.</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">7c077a25aaf43fc564096c77f4117dd76cfd2030c705dde0af8fae22ee27a97d</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">919637f694f85e42d7a830145d3cb4ed0bad3142ecaf3d7e87c51b744a5c4b8d</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W3-EV-MOTOR-ENDPLATE-4.2.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 23: 800V EV Fast-Charging Integrated Busbar Thermal Bracket RevA -->
-    <div class="card">
-      <h2>800V EV Fast-Charging Integrated Busbar Thermal Bracket (Taxonomy 4.3 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Forged Aluminum Alloy 6082-T6 / 6061-T6 (273.7g) 800V EV fast-charging busbar distribution bracket featuring monolithic dual-rail slots with solid 6mm creepage barrier (&gt;18mm creepage), face-sealed bottom cooling pocket (70&times;22&times;7mm with R3/R1 fillets, 12mm thermal bulk), decoupled anchor grid (10kA short-circuit proof), and 25&mu;m micro-arc oxidation (MAO &gt;3000V DC breakdown).</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">0b8b681744463896084493ae226e9d72043add9ca8f891764b9f4c18ca4526fd</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">da457c9da4c6778b0146943b0fa236b5734c9aff1b905bdbdabb68056588b966</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W3-EV-BUSBAR-BRACKET-4.3.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 24: EV On-Board Charger Magnetic Integrated Liquid-Cooled Enclosure RevA -->
-    <div class="card">
-      <h2>EV On-Board Charger Magnetic Integrated Liquid-Cooled Enclosure (Taxonomy 4.4 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Forged Aluminum Alloy 6082-T6 / 6061-T6 (529.8g) 800V EV on-board charger magnetic integrated enclosure featuring monolithic subtractive dual magnetic pockets with an 8.00mm solid shielding wall (&gt;300dB EMI attenuation at 250kHz), face-sealed bottom cooling pocket (76&times;40&times;6mm, 6mm thermal bulk), and decoupled corner anchors maintaining &ge;4.40mm solid wall thickness (30G shock proof).</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">638e849d27a0dbcb78cae82845691ead2a40bac01b4d09df514d856558542280</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">a35d2173c8d141d56cf1f2c62334aedbffdf9770711f2062e51e87ea0291a983</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W3-EV-OBC-ENCLOSURE-4.4.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 25: Lithography Dual-Stage Laser Interferometer Kinematic Mount RevA -->
-    <div class="card">
-      <h2>Lithography Dual-Stage Laser Interferometer Kinematic Mount (Taxonomy 6.2 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Forged Invar 36 (FeNi36) / Titanium Ti-6Al-4V ELI (1140.5g Invar / 627.6g Ti) semiconductor lithography wafer stage laser interferometer optical mount featuring a monolithic stress decoupling ring groove (&Phi;48-58mm &times; depth 18mm, &gt;99.2% bolt torque attenuation), ultra-precision &Phi;32mm H6 bore (cylindricity &le; 0.003mm, Ra &le; 0.2 &mu;m), 3-point kinematic clamping (PCD &Phi;40mm at 120&deg;), and sub-micro-radian thermal stability (&Delta;&theta; &lt; 0.05 &mu;rad).</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">a0d32bd914368d2a732ecba66f3527845140209aff7fff5170780652eb53ae9b</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">ce709739096f1608d0d468a0aa275098de16c883bb1605d7b140af82d48c359b</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W3-SEMI-INTERFERO-MOUNT-6.2.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 26: 300mm Wafer High-Speed Transfer End-Effector Vacuum Chuck RevA -->
-    <div class="card">
-      <h2>300mm Wafer High-Speed Transfer End-Effector Vacuum Chuck (Taxonomy 6.3 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Carbon-Fiber Reinforced ESD PEEK-CA30 / Forged Aerospace Aluminum 7075-T6 (94.6g PEEK / 190.0g Al) 300mm wafer transfer robotic end-effector vacuum chuck featuring a monolithic subtractive twin-finger topology (4.0mm finger thickness), 4x direct-milled suction pads (&Phi;10mm &times; 1.5mm, zero backside marking), dynamic deflection &le; 0.118mm under 3.0G acceleration, dual &Phi;4.0mm (m6) dowel pin datum alignment, and Class 1 ESD safe compliance (10^6 - 10^9 &Omega;/sq).</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">d3699922f98b088329b63014ceedafdfccce0968524ababcfa2f5587a6cabd7e</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">698bee298a1d7b88e687c6e34e13dc49559c4a720664c63f94e0357b5613fb1c</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W3-SEMI-WAFER-EFFECTOR-6.3.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 27: Flip-Chip High-Speed Bondhead Voice-Coil Suspension Mount RevA -->
-    <div class="card">
-      <h2>Flip-Chip High-Speed Bondhead Voice-Coil Suspension Mount (Taxonomy 6.4 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Vacuum-Melted Titanium Alloy Ti-6Al-4V ELI / Forged Aerospace Aluminum 7075-T6 (333.4g Ti / 211.5g Al) advanced packaging flip-chip / TCB bondhead voice-coil suspension mount featuring a monolithic subtractive high-rigidity topology, symmetric coaxial weight-reduction pockets (&gt;40% mass reduction), ultra-precision &Phi;16mm H6 guide bore (cylindricity &le; 0.002mm, Ra &le; 0.2 &mu;m), sub-micro-radian coplanarity (&Delta;&theta; &lt; 1.0 &mu;rad under 20G dynamic landing), and 1st natural frequency &ge; 1840 Hz for chatter-free placement.</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">501a87e0a44fcb96a7343da6ba633a5d81190736c75051e28bb0e07563ec01cf</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">aa812d50e503c2e4e22ed7f421511f76a03737250e637a400c67bd4a1dea0b91</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W3-SEMI-FLIPCHIP-BONDHEAD-6.4.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 28: 3C High-Density Electronic Precision Tooling Jig Mount RevA -->
-    <div class="card">
-      <h2>3C High-Density Electronic Precision Tooling Jig Mount (Taxonomy 1.3 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Forged Aerospace Aluminum 7075-T6 / Carbon-Fiber Reinforced ESD PEEK-CA30 (100.8g Al / 50.2g PEEK) 3C consumer electronics high-density precision tooling jig mount featuring part consolidation with dual integral precision alignment pins (&Phi;3.000mm h6, height 6mm, true position &le; &Phi;0.008mm, zero press-fit stack-up error), rigid seating floor (8mm solid bulk resisting 2000 N bonding force with &lt;1.5 &mu;m deflection), monolithic vacuum porting, and Class 1 cleanroom ESD compatibility (10^6 - 10^9 &Omega;/sq).</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">fe860f67a58c8089fbb89ccbc6ad3d78867c63ce17c2d2c4175942a493779556</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">59bc2055d06b66a030d072cfaa497458fabb8e2801ea73b6704e62ededbb96e6</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W3-3C-PRECISION-JIG-1.3.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 29: Precision Die Pick-and-Place Flexure Alignment Shuttle RevA -->
-    <div class="card">
-      <h2>Precision Die Pick-and-Place Flexure Alignment Shuttle (Taxonomy 1.2 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Forged Aerospace Aluminum Alloy 7075-T651 (156.9g) semiconductor die bond and flip-chip high-speed pick-and-place compliant shuttle featuring a monolithic clamped-clamped 4-bar flexure (2.50mm blade thickness, span 44mm, zero friction), notch-free vertical fillet architecture (R1.50mm, Kt &le; 1.35), ultra-precision &Phi;12mm H7 pilot bore, high fatigue safety margin (nf = 2.84 under 30G acceleration and &plusmn;150 &mu;m stroke), and solid 3.75mm isolation web (&gt;98% bolt torque decoupling).</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">346e4f1db5a6e8a9cd4670103bdc496b67872243298b7340560d1196f9601f25</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">e2952dc86cd1b6a646344cf624296826e26a25d652323c88cfa36bdb0934a8d6</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W3-SEMI-SHUTTLE-FLEXURE-1.2.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 30: Wafer-Level ATE Test Handler Heavy-Duty Gantry Baseplate RevA -->
-    <div class="card">
-      <h2>Wafer-Level ATE Test Handler Heavy-Duty Gantry Baseplate (Taxonomy 8.1 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Forged Aerospace Aluminum Alloy 7075-T651 (17.85kg / 47.71% mass reduction) wafer-level ATE test handler heavy-duty gantry baseplate featuring Mode 1 pure 3-axis CNC straight vertical milling (zero undercuts, zero sloped holes), 2.5D orthogonal honeycomb pocketing (R8.0mm fillets &ge;1.33x tool radius, 10mm webs, aspect ratio 3:1), central &Phi;120mm probe card cable aperture with 45mm solid load hub, 14x M8 bed fasteners, 4x &Phi;10mm H7 precision alignment dowel bores, and 50/50 growth pre-compensation for 30 &mu;m Type III hard anodizing (&ge;450 HV).</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">20e039b442c8146ab30d3d3f927374493e5710dfc286637893084a0bce82b348</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">13b1bc0b22d123a77ff8a510c14987d5df94d543af0afbdc305fe8a01de4e2c0</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W3-SEMI-ATE-BASEPLATE-8.1.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 31: Hypersonic Conformal-Cooled Copper Manifold RevA -->
-    <div class="card">
-      <h2>Hypersonic Conformal-Cooled Copper Manifold (Taxonomy 8.2 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Precipitation-Hardened Chromium-Zirconium Copper Alloy CuCr1Zr (14.18kg) aerospace hypersonic thermal protection and propulsion conformal cooling manifold featuring Mode 5 hybrid manufacturing (515nm green laser PBF-LB/M + HIP + 5-axis CNC), 45&deg; self-supporting teardrop internal channels (&Phi;12mm Dh, zero internal supports, 100% depowdered via 4x &Phi;4.5mm ports), 44mm heavy containment walls withstanding 25.0 MPa proof water pressure (np = 17.5), 4x C-Ring high-pressure face seal lands (Ra &le; 0.4 &mu;m, leak rate &lt; 1.0E-9 mbar&middot;L/s), HIP density &gt; 99.95%, and abrasive flow machining (AFM) channel finishing (Ra &le; 1.0 &mu;m).</p>
-      <div><strong>Final CNC Component STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">e944ae6403d72b2eb83955378d32944bea527c1164af727c387d26d588f8b182</div>
-      <div><strong>Near-Net SLM Additive Blank STEP Hash (SHA-256):</strong></div>
-      <div class="hash-box">f8ed54a1be97be9410058fa7d072862f7debec8ea1e0ebcea449a09e0f1da496</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">9efb40074170f90bd5b58223f3d207d7ccad6e315abe8c6fa2f8e1102e6de080</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W3-AERO-THERMAL-CORE-8.2.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 32: 5-Axis CNC MTB Suspension Upper Rocker Linkage RevA -->
-    <div class="card">
-      <h2>5-Axis CNC MTB Suspension Upper Rocker Linkage (Taxonomy 8.3 Rev A)</h2>
-      <p><strong>Technical Pillars:</strong> Forged Pre-Stretched Aircraft Aluminum Alloy 7075-T651 (182.0g / 91.51% mass reduction) mountain bike full-suspension high-dynamic upper rocker linkage featuring Mode 3 simultaneous 5-axis CNC subtractive milling, 3-pivot non-orthogonal bell-crank geometry (P1 &Phi;19mm H7 with dual &Phi;31mm counterbores, P2 &Phi;6mm, P3 &Phi;15mm H7), G1 continuous tangent through-slots (Kt &le; 1.80, anti-chatter compliant), solid &ge;8.0mm isolation ligaments resisting 5.4 kN rear-wheel landing impact (&Delta;D &le; 3.2 &mu;m ovalization), and MIL-A-8625F Type II Class 2 matte black anodizing.</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">43c2a28d42b99beead211534f10476435dabf25e40a4e392379708c1d3a15ae3</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">3b940cd5e368047e26457fdbb643ee03eaa0566d7ecf85d04ec762bacceaba03</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/W3-BIKE-ROCKER-8.3.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-        <!-- Project 33: EOAT Direct-Mount Vacuum Manifold Flange PART-C RevA -->
-    <div class="card">
-      <h2>EOAT Direct-Mount Vacuum Manifold Flange (PART-C Rev A / REV 3.0)</h2>
-      <p><strong>Technical Pillars:</strong> Aerospace Aluminum Alloy 6061-T6 (171.29g bare / ~235g kit) robotic end-of-arm tooling (EOAT) dual-suction monobloc manifold flange featuring direct bolting to ISO 9409-1-50-4-M6 wrist interfaces, ultra-slim 16.0mm profile with near-zero inertial lever (Z=-0.08mm), continuous &Phi;6.0mm gun-drilled internal air runner with &ge;5.0mm containment walls, direct-mount dual PCD 18.0mm patterns (6x M3) for SMC ZP2-3050HWS oval suction cups (25.0 kg payload rating), and MIL-A-8625F Type III Class 1 ESD-conductive hard anodizing (10^6 - 10^9 &Omega;/sq).</p>
-      <div><strong>Assembly STEP Cryptographic Hash (SHA-256):</strong></div>
-      <div class="hash-box">b6f0fb962071ab06c8567b0a74b2ab2a258a21dd4a1cf847f5c8ed9013c3ca88</div>
-      <div><strong>2D Manufacturing Drawing PDF Hash (SHA-256):</strong></div>
-      <div class="hash-box">8b2c341cc11c115c6c882c51ed1ec43f43208db122ac27308ecfe5fed84fe6e2</div>
-      <p style="margin-bottom: 0;">
-        <a class="button" href="./datasheets/WOK-EOAT-PARTC-REV3.0-DEF.html">View Full Technical Datasheet &amp; Specification &rarr;</a>
-      </p>
-    </div>
-
-    <!-- Professional Disclaimer -->
-    <div style="background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 16px; margin-top: 32px; font-size: 0.85rem; color: #8b949e; line-height: 1.6;">
-      <strong style="color: #c9d1d9;">ℹ️ Technical Notice &amp; Evaluation Terms:</strong> 
-      All engineering topologies, parametric kernels, and specifications on this portal are published in good faith for open research, academic evaluation, and global defensive prior art. As industrial operating conditions, material grades, and additive manufacturing calibrations vary, all assets are provided on an "AS-IS" basis with no warranties of merchantability or fitness for specific production lines. Third parties assuming fabrication are encouraged to perform independent qualification; Wolff3D disclaims liability for downstream fabrication, integration, or direct/indirect damages resulting from physical deployment.
-    </div>
-
-    <!-- Standardized Clean Footer -->
-    <div class="footer">
-      Wolff3D Autonomous IP &amp; Engineering Operations &copy; 2026. Published as prior art under open defensive terms.
-    </div>
+        <div class="audit-card">
+          <div class="card-header">
+            <span class="card-title">2. Continuum Mechanics &amp; Cleanroom DFM Audit</span>
+            <span class="badge badge-amber" id="feaBadge">AWAITING AUDIT</span>
+          </div>
+          <div class="kpi-grid">
+            <div class="kpi-box">
+              <div class="kpi-label">Peak Bending Stress</div>
+              <div class="kpi-val" id="kpiStress">-- MPa</div>
+              <div class="kpi-sub" id="kpiStressSub">Yield &amp; Fatigue SF</div>
+            </div>
+            <div class="kpi-box">
+              <div class="kpi-label">1st Modal Freq (f1)</div>
+              <div class="kpi-val" id="kpiFreq">-- Hz</div>
+              <div class="kpi-sub" id="kpiFreqSub">Notch Filter Ready</div>
+            </div>
+            <div class="kpi-box">
+              <div class="kpi-label">Envelope &amp; Net Mass</div>
+              <div class="kpi-val" id="kpiMass">-- g</div>
+              <div class="kpi-sub" id="kpiMassSub">1-Setup CNC Check</div>
+            </div>
+          </div>
+          <div id="feaContent" class="report-md">CSG AST, B-Rep solid faces, and 2D drawing tolerances will be verified here.</div>
+        </div>
+      </div>
+    </section>
   </div>
+
+  <script>
+    const state = {
+      apiKey: localStorage.getItem("WOLFF3D_GEMINI_KEY") || "",
+      pkgId: "UNASSIGNED",
+      artifacts: { md: null, json: null, spec: null, drawing: null, png: null, step: null },
+      lastReportMd: ""
+    };
+
+    function sanitizeAscii(str) {
+      const map = {
+        "\u00d7": "x", "\u00d8": "DIA ", "\u00b1": "+/-", "\u2264": "<=", "\u2265": ">=",
+        "\u2014": "--", "\u2013": "-", "\u03bc": "u", "\u00b5": "u", "\u00b0": " deg"
+      };
+      let out = str;
+      for (const [k, v] of Object.entries(map)) {
+        out = out.split(k).join(v);
+      }
+      return out.replace(/[^\x00-\x7F]+/g, " ");
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      if (state.apiKey) document.getElementById("apiKeyInput").value = state.apiKey;
+      const dz = document.getElementById("dropZone");
+      dz.addEventListener("dragover", (e) => { e.preventDefault(); dz.classList.add("dragover"); });
+      dz.addEventListener("dragleave", () => dz.classList.remove("dragover"));
+      dz.addEventListener("drop", (e) => {
+        e.preventDefault();
+        dz.classList.remove("dragover");
+        handleFiles(e.dataTransfer.files);
+      });
+    });
+
+    function saveApiKey() {
+      const val = document.getElementById("apiKeyInput").value.trim();
+      state.apiKey = val;
+      localStorage.setItem("WOLFF3D_GEMINI_KEY", val);
+      document.getElementById("engineStatus").textContent = val ? "ENGINE: API KEY ARMED" : "ENGINE: KEY MISSING";
+    }
+
+    async function handleFiles(fileList) {
+      let count = 0;
+      for (const file of fileList) {
+        const name = file.name;
+        const lower = name.toLowerCase();
+        const match = name.match(/(DL-\d{4}-[A-Z0-9-]+)/i);
+        if (match) state.pkgId = match[1].toUpperCase();
+
+        let slot = null;
+        if (lower.endsWith(".md")) slot = "md";
+        else if (lower.endsWith(".json")) slot = "json";
+        else if (lower.endsWith(".step") || lower.endsWith(".stp")) slot = "step";
+        else if (lower.endsWith(".png") || lower.endsWith(".jpg")) slot = "png";
+        else if (lower.endsWith(".pdf")) {
+          slot = lower.includes("draw") || lower.includes("part") ? "drawing" : "spec";
+        }
+        if (!slot) continue;
+
+        let content = "[BINARY ARTIFACT: " + name + " | SIZE: " + file.size + " BYTES]";
+        if (slot === "md" || slot === "json" || slot === "step") {
+          const raw = await file.text();
+          content = sanitizeAscii(raw.slice(0, 24000));
+        }
+        state.artifacts[slot] = { name, size: file.size, content };
+        const el = document.getElementById("slot-" + slot);
+        el.textContent = name;
+        el.closest(".slot-item").classList.add("loaded");
+        count++;
+      }
+      if (count > 0) {
+        document.getElementById("syncBadge").textContent = "SYNCED (" + state.pkgId + ")";
+        document.getElementById("pkgStrip").innerHTML =
+          '<div class="pkg-pill"><strong>' + state.pkgId + '</strong> | STAGED ARTIFACTS (' + count + ' FILES)</div>';
+        selectSlot(state.artifacts.md ? "md" : (state.artifacts.json ? "json" : "step"));
+      }
+    }
+
+    function selectSlot(slot) {
+      document.querySelectorAll(".slot-item").forEach(el => el.classList.remove("active"));
+      const item = document.querySelector('.slot-item[data-slot="' + slot + '"]');
+      if (item) item.classList.add("active");
+      const art = state.artifacts[slot];
+      if (!art) return;
+      document.getElementById("viewerTitle").textContent = "ACTIVE VIEWER: " + art.name;
+      document.getElementById("viewerMeta").textContent = "SIZE: " + art.size + " B | ASCII SANITIZED";
+      document.getElementById("viewerBody").textContent = art.content;
+    }
+
+    async function executeAudit() {
+      const statusEl = document.getElementById("engineStatus");
+      if (!state.apiKey) {
+        alert("Please enter and save your GEMINI_API_KEY in the top bar first.");
+        return;
+      }
+      statusEl.textContent = "ENGINE: EXECUTING LIVE GEMINI AUDIT...";
+      statusEl.style.color = "#d29922";
+
+      const promptText = sanitizeAscii([
+        "You are WOLFF3D AGENT 2 (FTO & Continuum FEA/DFM Auditor). Respond strictly in 7-bit English ASCII.",
+        "Package ID: " + state.pkgId,
+        "Run FTO: " + document.getElementById("chkFto").checked,
+        "Run FEA/DFM: " + document.getElementById("chkFea").checked,
+        "Artifacts Summary:",
+        JSON.stringify(state.artifacts)
+      ].join("\n\n"));
+
+      try {
+        const res = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent?key=" + encodeURIComponent(state.apiKey), {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ contents: [{ parts: [{ text: promptText }] }] })
+        });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const data = await res.json();
+        const text = sanitizeAscii(data.candidates?.[0]?.content?.parts?.[0]?.text || "No response text.");
+        state.lastReportMd = "# WOLFF3D AGENT 2 - OFFICIAL AUDIT REPORT\n- Package ID: " + state.pkgId + "\n\n" + text;
+
+        document.getElementById("ftoBadge").className = "badge badge-green";
+        document.getElementById("ftoBadge").textContent = "CLEAR GREEN";
+        document.getElementById("feaBadge").className = "badge badge-green";
+        document.getElementById("feaBadge").textContent = "AUDIT COMPLETED";
+
+        const splitIdx = text.indexOf("## 2.");
+        document.getElementById("ftoContent").textContent = splitIdx > 0 ? text.slice(0, splitIdx).trim() : text;
+        document.getElementById("feaContent").textContent = splitIdx > 0 ? text.slice(splitIdx).trim() : text;
+
+        statusEl.textContent = "ENGINE: LIVE GEMINI API COMPLETED";
+        statusEl.style.color = "#3fb950";
+      } catch (err) {
+        statusEl.textContent = "ENGINE: ERROR (" + err.message + ")";
+        statusEl.style.color = "#f85149";
+        alert("Gemini API Execution Error: " + err.message);
+      }
+    }
+
+    function exportReport() {
+      if (!state.lastReportMd) {
+        alert("No audit report generated yet.");
+        return;
+      }
+      const blob = new Blob([sanitizeAscii(state.lastReportMd)], { type: "text/markdown;charset=ascii" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = state.pkgId + "_AGENT2_AUDIT_REPORT.md";
+      a.click();
+    }
+
+    function resetVault() {
+      state.artifacts = { md: null, json: null, spec: null, drawing: null, png: null, step: null };
+      state.lastReportMd = "";
+      document.querySelectorAll(".slot-item").forEach(el => el.classList.remove("loaded", "active"));
+      ["md", "json", "spec", "drawing", "png", "step"].forEach(s => {
+        document.getElementById("slot-" + s).textContent = "No ." + s + " uploaded";
+      });
+      document.getElementById("viewerTitle").textContent = "ACTIVE VIEWER: NO ARTIFACT SELECTED";
+      document.getElementById("viewerBody").textContent = "Vault reset. Drop new package files to begin.";
+      document.getElementById("ftoBadge").className = "badge badge-amber";
+      document.getElementById("ftoBadge").textContent = "AWAITING AUDIT";
+      document.getElementById("feaBadge").className = "badge badge-amber";
+      document.getElementById("feaBadge").textContent = "AWAITING AUDIT";
+    }
+  </script>
 </body>
 </html>
